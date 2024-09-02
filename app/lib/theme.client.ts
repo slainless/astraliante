@@ -5,16 +5,6 @@ import { THEME_COOKIE_KEY, Theme } from "./theme"
 
 export const themeAtom = atomWithStorage(THEME_COOKIE_KEY, Theme.System)
 
-// sync theme from SSR
-export function useSyncTheme(ssrTheme: Theme) {
-  const [theme, setTheme] = useAtom(themeAtom)
-
-  useEffect(() => {
-    // sync theme to SSR response once
-    setTheme(ssrTheme)
-  }, [])
-}
-
 export function useSubscribeTheme() {
   const theme = useAtomValue(themeAtom)
 
