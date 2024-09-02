@@ -1,5 +1,5 @@
 import type { Theme } from "#lib/theme"
-import { useSubscribeTheme } from "#lib/theme.client"
+import { useSubscribeTheme } from "#lib/theme"
 import type { PropsWithChildren } from "react"
 
 export interface BodyProps extends PropsWithChildren {
