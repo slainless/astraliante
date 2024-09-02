@@ -1,5 +1,14 @@
+import type { Theme } from "#lib/theme"
+import { useSubscribeTheme, useSyncTheme } from "#lib/theme.client"
 import type { PropsWithChildren } from "react"
 
-export default function Body(props: PropsWithChildren) {
-  return <body className="bg-background text-foreground">{props.children}</body>
+export interface BodyProps extends PropsWithChildren {
+  theme: Theme
+}
+
+export default function Body(props: BodyProps) {
+  useSyncTheme(props.theme)
+  useSubscribeTheme()
+
+  return <body className={`${props.theme}`}>{props.children}</body>
 }
