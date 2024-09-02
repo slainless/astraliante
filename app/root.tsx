@@ -4,14 +4,13 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
-import type { LinksFunction } from '@remix-run/node';
+} from "@remix-run/react"
+import type { LinksFunction } from "@remix-run/node"
 
-import styles from "./tailwind.css?url";
+import styles from "./tailwind.css?url"
+import Body from "./components/body"
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
-];
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }]
 
 export default function App() {
   return (
@@ -22,11 +21,11 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <Body>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-      </body>
+      </Body>
     </html>
-  );
+  )
 }

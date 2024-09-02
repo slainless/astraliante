@@ -1,11 +1,11 @@
-import type { MetaFunction } from "@netlify/remix-runtime";
+import type { MetaFunction } from "@netlify/remix-runtime"
 
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
     { name: "description", content: "Welcome to Remix!" },
-  ];
-};
+  ]
+}
 
 export default function Index() {
   return (
@@ -37,5 +37,5 @@ export default function Index() {
         </li>
       </ul>
     </div>
-  );
+  )
 }

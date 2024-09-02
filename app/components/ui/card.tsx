@@ -1,86 +1,79 @@
-import * as React from 'react'
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 const Card = React.forwardRef<
-   HTMLDivElement,
-   React.HTMLAttributes<HTMLDivElement>
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-   <div
-      ref={ref}
-      className={ny(
-         'bg-card text-card-foreground rounded-lg border shadow-sm',
-         className,
-      )}
-      {...props}
-   />
+  <div
+    ref={ref}
+    className={ny(
+      "bg-card text-card-foreground rounded-lg border shadow-sm",
+      className
+    )}
+    {...props}
+  />
 ))
-Card.displayName = 'Card'
+Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
-   HTMLDivElement,
-   React.HTMLAttributes<HTMLDivElement>
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-   <div
-      ref={ref}
-      className={ny('flex flex-col space-y-1.5 p-6', className)}
-      {...props}
-   />
+  <div
+    ref={ref}
+    className={ny("flex flex-col space-y-1.5 p-6", className)}
+    {...props}
+  />
 ))
-CardHeader.displayName = 'CardHeader'
+CardHeader.displayName = "CardHeader"
 
 const CardTitle = React.forwardRef<
-   HTMLParagraphElement,
-   React.HTMLAttributes<HTMLHeadingElement>
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
-   <h3
-      ref={ref}
-      className={ny(
-         'text-2xl font-semibold leading-none tracking-tight',
-         className,
-      )}
-      {...props}
-   />
+  <h3
+    ref={ref}
+    className={ny(
+      "text-2xl font-semibold leading-none tracking-tight",
+      className
+    )}
+    {...props}
+  />
 ))
-CardTitle.displayName = 'CardTitle'
+CardTitle.displayName = "CardTitle"
 
 const CardDescription = React.forwardRef<
-   HTMLParagraphElement,
-   React.HTMLAttributes<HTMLParagraphElement>
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-   <p
-      ref={ref}
-      className={ny('text-muted-foreground text-sm', className)}
-      {...props}
-   />
+  <p
+    ref={ref}
+    className={ny("text-muted-foreground text-sm", className)}
+    {...props}
+  />
 ))
-CardDescription.displayName = 'CardDescription'
+CardDescription.displayName = "CardDescription"
 
 const CardContent = React.forwardRef<
-   HTMLDivElement,
-   React.HTMLAttributes<HTMLDivElement>
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-   <div ref={ref} className={ny('p-6 pt-0', className)} {...props} />
+  <div ref={ref} className={ny("p-6 pt-0", className)} {...props} />
 ))
-CardContent.displayName = 'CardContent'
+CardContent.displayName = "CardContent"
 
 const CardFooter = React.forwardRef<
-   HTMLDivElement,
-   React.HTMLAttributes<HTMLDivElement>
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-   <div
-      ref={ref}
-      className={ny('flex items-center p-6 pt-0', className)}
-      {...props}
-   />
+  <div
+    ref={ref}
+    className={ny("flex items-center p-6 pt-0", className)}
+    {...props}
+  />
 ))
-CardFooter.displayName = 'CardFooter'
+CardFooter.displayName = "CardFooter"
 
-export {
-   Card,
-   CardHeader,
-   CardFooter,
-   CardTitle,
-   CardDescription,
-   CardContent,
-}
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
