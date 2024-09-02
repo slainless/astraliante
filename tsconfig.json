@@ -22,9 +22,9 @@
     "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./app/*"],
-      "#components": ["./app/components"],
-      "#lib": ["./app/lib"]
+      "#components/*": ["./app/components/*"],
+      "#lib/*": ["./app/lib/*"],
+      "~/*": ["./app/*"]
     },
     // Vite takes care of building everything, not tsc.
     "noEmit": true
