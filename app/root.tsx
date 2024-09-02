@@ -6,17 +6,13 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from "@remix-run/react"
-import type {
-  LinksFunction,
-  LoaderFunction,
-  LoaderFunctionArgs,
-} from "@remix-run/node"
+import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node"
 
 import styles from "./tailwind.css?url"
 import Body from "./components/body"
 import { parse } from "cookie"
 import { GlobalStore } from "#lib/jotai"
-import { getSSRPreferredTheme } from "#lib/theme.server"
+import { getSSRPreferredTheme, themeAtom } from "#lib/theme"
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }]
 
@@ -37,7 +33,7 @@ export default function App() {
         <Links />
       </head>
       <GlobalStore>
-        <Body theme={theme}>
+        <Body ssrTheme={theme} themeAtom={themeAtom}>
           <Outlet />
           <ScrollRestoration />
           <Scripts />

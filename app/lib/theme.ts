@@ -1,5 +1,5 @@
 import { parse } from "cookie"
-import { useAtomValue } from "jotai"
+import { useAtomValue, type Atom } from "jotai"
 import { atomWithStorage } from "jotai/utils"
 import { useEffect } from "react"
 
@@ -18,8 +18,8 @@ export const themeAtom = atomWithStorage(THEME_COOKIE_KEY, Theme.System)
 const clearThemes = (el: HTMLElement) =>
   themes.forEach((theme) => el.classList.remove(theme))
 
-export function useSubscribeTheme() {
-  const theme = useAtomValue(themeAtom)
+export function useSubscribeTheme(atom: Atom<Theme>) {
+  const theme = useAtomValue(atom)
 
   useEffect(() => {
     clearThemes(document.body)
