@@ -12,7 +12,7 @@ import styles from "./tailwind.css?url"
 import Body from "./components/body"
 import { parse } from "cookie"
 import { GlobalStore } from "#lib/jotai"
-import { getSSRPreferredTheme, themeAtom } from "#lib/theme"
+import { SystemThemeSupport, getSSRPreferredTheme, themeAtom } from "#lib/theme"
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }]
 
@@ -31,6 +31,7 @@ export default function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <SystemThemeSupport />
       </head>
       <GlobalStore>
         <Body ssrTheme={theme} themeAtom={themeAtom}>

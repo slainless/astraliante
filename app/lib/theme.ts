@@ -1,7 +1,7 @@
 import { parse } from "cookie"
 import { useAtomValue, type Atom } from "jotai"
 import { atomWithStorage } from "jotai/utils"
-import { useEffect } from "react"
+import { createElement, useEffect } from "react"
 
 export const THEME_COOKIE_KEY = "astraliante_theme"
 
@@ -15,15 +15,23 @@ export const themes = Object.values(Theme)
 
 export const themeAtom = atomWithStorage(THEME_COOKIE_KEY, Theme.System)
 
-const clearThemes = (el: HTMLElement) =>
-  themes.forEach((theme) => el.classList.remove(theme))
+// const clearThemes = (el: HTMLElement) =>
+//   themes.forEach((theme) => el.classList.remove(theme))
+
+export function isDarkMode(theme: Theme) {
+  if (theme == Theme.Light) return false
+  if (theme == Theme.Dark) return true
+  if (globalThis["window"] == null) return false
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+}
 
 export function useSubscribeTheme(atom: Atom<Theme>) {
   const theme = useAtomValue(atom)
 
   useEffect(() => {
-    clearThemes(document.body)
-    document.body.classList.add(theme)
+    // clearThemes(document.body)
+    if (isDarkMode(theme)) document.body.classList.add("dark")
+    else document.body.classList.remove("dark")
   }, [theme])
 
   useEffect(() => {
@@ -41,4 +49,15 @@ export function getSSRPreferredTheme(
   } else {
     return Theme.System
   }
+}
+
+export function SystemThemeSupport() {
+  const src = /*javascript*/ `
+    ${isDarkMode.toString()}
+
+    const theme = localStorage.getItem("${THEME_COOKIE_KEY}")
+    if(isDarkMode(theme)) document.documentElement.classList.add("dark") 
+    else document.documentElement.classList.remove("dark")
+  `
+  return createElement("script", { dangerouslySetInnerHTML: { __html: src } })
 }

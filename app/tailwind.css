@@ -1,4 +1,4 @@
-@define-mixin light-variables {
+/* @define-mixin light-variables {
   --background: 0 0% 100%;
   --foreground: 226.2 57% 21%;
 
@@ -58,13 +58,17 @@
   --border: 225.9 70.7% 40.2%;
   --input: 225.9 70.7% 40.2%;
   --ring: 211.7 96.4% 78.4%;
-}
+} */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+  /*   
   .light {
     @mixin light-variables;
   }
@@ -85,7 +89,7 @@
     .system {
       @mixin dark-variables;
     }
-  }
+  } */
 }
 
 @layer base {
