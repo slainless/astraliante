@@ -2,6 +2,8 @@
   "include": [
     "env.d.ts",
     "**/*.ts",
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx",
     "**/*.tsx",
     "netlify-edge-plugin.ts",
     "postcss.config.js"
