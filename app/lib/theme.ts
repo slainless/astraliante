@@ -30,8 +30,8 @@ export function useSubscribeTheme(atom: Atom<Theme>) {
 
   useEffect(() => {
     // clearThemes(document.body)
-    if (isDarkMode(theme)) document.body.classList.add("dark")
-    else document.body.classList.remove("dark")
+    if (isDarkMode(theme)) document.documentElement.classList.add("dark")
+    else document.documentElement.classList.remove("dark")
   }, [theme])
 
   useEffect(() => {
