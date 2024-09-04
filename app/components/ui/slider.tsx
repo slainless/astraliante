@@ -103,13 +103,13 @@ const Slider = React.forwardRef<
       >
         <SliderPrimitive.Track
           className={ny(
-            "bg-primary/20 relative grow overflow-hidden rounded-full",
+            "bg-primary-subtle/20 relative grow overflow-hidden rounded-full",
             orientation === "horizontal" ? "h-1.5 w-full" : "h-full w-1.5"
           )}
         >
           <SliderPrimitive.Range
             className={ny(
-              "bg-primary absolute",
+              "bg-primary-subtle absolute",
               orientation === "horizontal" ? "h-full" : "w-full"
             )}
           />
@@ -155,7 +155,7 @@ const Slider = React.forwardRef<
           <SliderPrimitive.Thumb
             key={index}
             className={ny(
-              "border-primary/50 bg-background focus-visible:ring-ring block size-4 rounded-full border shadow transition-colors focus-visible:outline-none focus-visible:ring-1"
+              "border-primary-subtle/50 bg-background focus-visible:ring-ring block size-4 rounded-full border shadow transition-colors focus-visible:outline-none focus-visible:ring-1"
             )}
           >
             {hoveredThumbIndex && formatLabel && (

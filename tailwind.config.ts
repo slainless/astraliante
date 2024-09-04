@@ -59,14 +59,16 @@ export default {
         }),
         foreground: colors.alias({ name: "foreground", value: "slate.12" }),
         primary: {
-          DEFAULT: colors.alias({ name: "primary", value: "indigo.3" }),
+          ...(colors.alias("indigo") as Record<string, string>),
+          subtle: colors.alias({ name: "primary-subtle", value: "indigo.3" }),
           foreground: colors.alias({
             name: "primary-foreground",
             value: "indigo.12",
           }),
         },
+        gray: colors.alias("slate"),
         secondary: {
-          DEFAULT: colors.alias({ name: "secondary", value: "slate.3" }),
+          subtle: colors.alias({ name: "secondary-subtle", value: "slate.3" }),
           foreground: colors.alias({
             name: "secondary-foreground",
             value: "slate.12",
@@ -87,7 +89,8 @@ export default {
           }),
         },
         accent: {
-          DEFAULT: colors.alias({ name: "accent", value: "jade.3" }),
+          ...(colors.alias("jade") as Record<string, string>),
+          subtle: colors.alias({ name: "accent-subtle", value: "jade.3" }),
           foreground: colors.alias({
             name: "accent-foreground",
             value: "jade.12",
