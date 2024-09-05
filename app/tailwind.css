@@ -1,5 +1,4 @@
-@import "./utils.css";
-@import "./token.css";
+@import "./style/token.css";
 
 @tailwind base;
 @tailwind components;
@@ -7,28 +6,9 @@
 
 @layer base {
   :root {
-    @mixin palette indigo, 0.191, 267.01;
-    @mixin palette slate, 0.007, 248.07;
-    @mixin palette jade, 0.115, 170.73;
-    @mixin palette ruby, 0.195, 13.15;
-    @mixin palette green, 0.133, 157.68;
-    @mixin palette amber, 0.157, 84.13;
-    @mixin palette cyan, 0.1216861438783739, 221.7438047249627;
-
-    @mixin alias primary, indigo;
-    @mixin alias gray, slate;
-    @mixin alias accent, jade;
-    @mixin alias note, ruby;
-    @mixin alias good, green;
-    @mixin alias warning, amber;
-    @mixin alias caution, cyan;
-  }
-
-  :root {
     --radius: 0.5rem;
-
     --color-white: 1 0 0;
-
+    @mixin theme;
     @mixin tokens-light;
   }
   .light {
