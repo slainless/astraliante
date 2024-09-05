@@ -31,9 +31,9 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-bdc;
   }
   body {
-    @apply bg-background text-text;
+    @apply bg-bgc text-fgc;
   }
 }

@@ -58,7 +58,7 @@ export function Dashboard03() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="bg-background-muted rounded-lg"
+                className="bg-bgc-muted rounded-lg"
                 aria-label="Playground"
               >
                 <SquareTerminal className="size-5" />
@@ -163,7 +163,7 @@ export function Dashboard03() {
         </nav>
       </aside>
       <div className="flex flex-col">
-        <header className="bg-background-elevated-01 sticky top-0 z-10 flex h-[57px] items-center gap-1 border-b border-border-strong px-4">
+        <header className="bg-bgc-elevated sticky top-0 z-10 flex h-[57px] items-center gap-1 border-b px-4">
           <h1 className="text-xl font-semibold">Playground</h1>
           <Drawer>
             <DrawerTrigger asChild>
@@ -195,12 +195,12 @@ export function Dashboard03() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="genesis">
-                          <div className="text-text-muted flex items-start gap-3">
+                          <div className="text-fgc-muted flex items-start gap-3">
                             <Rabbit className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
                                 Neural{" "}
-                                <span className="text-text font-medium">
+                                <span className="text-fgc font-medium">
                                   Genesis
                                 </span>
                               </p>
@@ -211,12 +211,12 @@ export function Dashboard03() {
                           </div>
                         </SelectItem>
                         <SelectItem value="explorer">
-                          <div className="text-text-muted flex items-start gap-3">
+                          <div className="text-fgc-muted flex items-start gap-3">
                             <Bird className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
                                 Neural{" "}
-                                <span className="text-text font-medium">
+                                <span className="text-fgc font-medium">
                                   Explorer
                                 </span>
                               </p>
@@ -227,12 +227,12 @@ export function Dashboard03() {
                           </div>
                         </SelectItem>
                         <SelectItem value="quantum">
-                          <div className="text-text-muted flex items-start gap-3">
+                          <div className="text-fgc-muted flex items-start gap-3">
                             <Turtle className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
                                 Neural{" "}
-                                <span className="text-text font-medium">
+                                <span className="text-fgc font-medium">
                                   Quantum
                                 </span>
                               </p>
@@ -314,12 +314,12 @@ export function Dashboard03() {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="genesis">
-                        <div className="text-text-muted flex items-start gap-3">
+                        <div className="text-fgc-muted flex items-start gap-3">
                           <Rabbit className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
                               Neural{" "}
-                              <span className="text-text font-medium">
+                              <span className="text-fgc font-medium">
                                 Genesis
                               </span>
                             </p>
@@ -330,12 +330,12 @@ export function Dashboard03() {
                         </div>
                       </SelectItem>
                       <SelectItem value="explorer">
-                        <div className="text-text-muted flex items-start gap-3">
+                        <div className="text-fgc-muted flex items-start gap-3">
                           <Bird className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
                               Neural{" "}
-                              <span className="text-text font-medium">
+                              <span className="text-fgc font-medium">
                                 Explorer
                               </span>
                             </p>
@@ -346,12 +346,12 @@ export function Dashboard03() {
                         </div>
                       </SelectItem>
                       <SelectItem value="quantum">
-                        <div className="text-text-muted flex items-start gap-3">
+                        <div className="text-fgc-muted flex items-start gap-3">
                           <Turtle className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
                               Neural{" "}
-                              <span className="text-text font-medium">
+                              <span className="text-fgc font-medium">
                                 Quantum
                               </span>
                             </p>
@@ -407,13 +407,13 @@ export function Dashboard03() {
               </fieldset>
             </form>
           </div>
-          <div className="bg-background-muted/50 relative flex h-full min-h-[50vh] flex-col rounded-xl p-4 lg:col-span-2">
+          <div className="bg-bgc-muted/50 relative flex h-full min-h-[50vh] flex-col rounded-xl p-4 lg:col-span-2">
             <Badge variant="outline" className="absolute right-3 top-3">
               Output
             </Badge>
             <div className="flex-1" />
             <form
-              className="bg-background focus-within:ring-ring relative overflow-hidden rounded-lg border border-border-strong focus-within:ring-1"
+              className="bg-bgc focus-within:ring-ring relative overflow-hidden rounded-lg border focus-within:ring-1"
               x-chunk="dashboard-03-chunk-1"
             >
               <Label htmlFor="message" className="sr-only">

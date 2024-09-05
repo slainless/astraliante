@@ -321,7 +321,7 @@ const dotsContainerVariants = cva("absolute flex justify-center", {
 })
 
 const dotsVariants = cva(
-  "rounded-full ring-1 ring-muted ring-offset-1 ring-offset-background transition-all duration-300",
+  "rounded-full ring-1 ring-muted ring-offset-1 ring-offset-bgc transition-all duration-300",
   {
     variants: {
       size: {
@@ -373,9 +373,7 @@ const CarouselDots = React.forwardRef<HTMLDivElement, CarouselDotsProps>(
             onClick={() => scrollTo(index)}
             className={ny(
               dotsVariants({ size }),
-              currentIndex === index
-                ? "bg-card-foreground"
-                : "bg-background-muted"
+              currentIndex === index ? "bg-card-foreground" : "bg-bgc-muted"
             )}
           />
         ))}

@@ -67,12 +67,12 @@ import {
 
 export function Dashboard07() {
   return (
-    <div className="bg-background flex min-h-screen w-full flex-col">
-      <aside className="bg-background-elevated-01 fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r sm:flex">
+    <div className="bg-bgc flex min-h-screen w-full flex-col">
+      <aside className="bg-bgc-elevated fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r sm:flex">
         <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
           <a
             href="#"
-            className="bg-background-contrast-primary text-text-light group flex size-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:size-8 md:text-base"
+            className="bg-bgc-primary text-fgc-light group flex size-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:size-8 md:text-base"
           >
             <Package2 className="size-4 transition-all group-hover:scale-110" />
             <span className="sr-only">Acme Inc</span>
@@ -81,7 +81,7 @@ export function Dashboard07() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="text-text-muted hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="text-fgc-muted hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <Home className="size-5" />
                 <span className="sr-only">Dashboard</span>
@@ -93,7 +93,7 @@ export function Dashboard07() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="bg-background-subtle text-text hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="bg-bgc-subtle text-fgc hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <ShoppingCart className="size-5" />
                 <span className="sr-only">Orders</span>
@@ -105,7 +105,7 @@ export function Dashboard07() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="text-text-muted hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="text-fgc-muted hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <Package className="size-5" />
                 <span className="sr-only">Products</span>
@@ -117,7 +117,7 @@ export function Dashboard07() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="text-text-muted hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="text-fgc-muted hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <Users2 className="size-5" />
                 <span className="sr-only">Customers</span>
@@ -129,7 +129,7 @@ export function Dashboard07() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="text-text-muted hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="text-fgc-muted hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <LineChart className="size-5" />
                 <span className="sr-only">Analytics</span>
@@ -143,7 +143,7 @@ export function Dashboard07() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="text-text-muted hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="text-fgc-muted hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <Settings className="size-5" />
                 <span className="sr-only">Settings</span>
@@ -154,7 +154,7 @@ export function Dashboard07() {
         </nav>
       </aside>
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
-        <header className="bg-background sticky top-0 z-30 flex h-14 items-center gap-4 border-b px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+        <header className="bg-bgc sticky top-0 z-30 flex h-14 items-center gap-4 border-b px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">
@@ -166,42 +166,39 @@ export function Dashboard07() {
               <nav className="grid gap-6 text-lg font-medium">
                 <a
                   href="#"
-                  className="bg-background-primary text-text-light group flex size-10 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:text-base"
+                  className="bg-bgc-primary text-fgc-light group flex size-10 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:text-base"
                 >
                   <Package2 className="size-5 transition-all group-hover:scale-110" />
                   <span className="sr-only">Acme Inc</span>
                 </a>
                 <a
                   href="#"
-                  className="text-text-muted hover:text-text flex items-center gap-4 px-2.5"
+                  className="text-fgc-muted hover:text-fgc flex items-center gap-4 px-2.5"
                 >
                   <Home className="size-5" />
                   Dashboard
                 </a>
                 <a
                   href="#"
-                  className="text-text-muted hover:text-text flex items-center gap-4 px-2.5"
+                  className="text-fgc-muted hover:text-fgc flex items-center gap-4 px-2.5"
                 >
                   <ShoppingCart className="size-5" />
                   Orders
                 </a>
-                <a
-                  href="#"
-                  className="text-text flex items-center gap-4 px-2.5"
-                >
+                <a href="#" className="text-fgc flex items-center gap-4 px-2.5">
                   <Package className="size-5" />
                   Products
                 </a>
                 <a
                   href="#"
-                  className="text-text-muted hover:text-text flex items-center gap-4 px-2.5"
+                  className="text-fgc-muted hover:text-fgc flex items-center gap-4 px-2.5"
                 >
                   <Users2 className="size-5" />
                   Customers
                 </a>
                 <a
                   href="#"
-                  className="text-text-muted hover:text-text flex items-center gap-4 px-2.5"
+                  className="text-fgc-muted hover:text-fgc flex items-center gap-4 px-2.5"
                 >
                   <LineChart className="size-5" />
                   Settings
@@ -229,11 +226,11 @@ export function Dashboard07() {
             </BreadcrumbList>
           </Breadcrumb>
           <div className="relative ml-auto flex-1 md:grow-0">
-            <Search className="text-text-muted absolute left-2.5 top-2.5 size-4" />
+            <Search className="text-fgc-muted absolute left-2.5 top-2.5 size-4" />
             <Input
               type="search"
               placeholder="Search..."
-              className="bg-background-neutral w-full rounded-lg pl-8 md:w-[200px] lg:w-[336px]"
+              className="bg-bgc-field w-full rounded-lg pl-8 md:w-[200px] lg:w-[336px]"
             />
           </div>
           <DropdownMenu>
@@ -564,7 +561,7 @@ export function Dashboard07() {
                           type="button"
                           className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed"
                         >
-                          <Upload className="text-text-muted size-4" />
+                          <Upload className="text-fgc-muted size-4" />
                           <span className="sr-only">Upload</span>
                         </button>
                       </div>

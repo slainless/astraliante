@@ -19,100 +19,136 @@
 }
 
 @define-mixin tokens-light {
-  --color-background: var(--color-white);
-  --color-background-muted: 0.96 var(--base-color-gray);
-  --color-background-subtle: 0.95 var(--base-color-gray);
-  --color-background-elevated-01: var(--color-white);
-  --color-background-neutral: var(--color-white);
+  /* -------------------------------------------------------------------------- */
+  /*                                 Background                                 */
+  /* -------------------------------------------------------------------------- */
 
-  --color-background-inverse: var(--color-gray-900);
-  --color-background-inverse-primary: var(--color-primary-900);
-  --color-background-inverse-accent: var(--color-accent-900);
-  --color-background-inverse-caution: var(--color-caution-900);
-  --color-background-inverse-good: var(--color-good-900);
-  --color-background-inverse-warning: var(--color-warning-900);
-  --color-background-inverse-note: var(--color-note-900);
+  /* gray palette */
+  --color-bg: var(--color-white);
+  --color-bg-muted: 0.96 var(--base-color-gray);
+  --color-bg-subtle: 0.95 var(--base-color-gray);
+  --color-bg-elevated: var(--color-white);
+  --color-bg-inverse: var(--color-gray-900);
+  --color-bg-gray: var(--color-gray);
 
-  --color-background-contrast: var(--color-gray);
-  --color-background-contrast-primary: var(--color-primary);
-  --color-background-contrast-accent: var(--color-accent);
-  --color-background-contrast-caution: var(--color-caution);
-  --color-background-contrast-good: var(--color-good);
-  --color-background-contrast-warning: var(--color-warning);
-  --color-background-contrast-note: var(--color-note);
+  /* themed */
+  --color-bg-primary: var(--color-primary);
+  --color-bg-accent: var(--color-accent);
+  --color-bg-caution: var(--color-caution);
+  --color-bg-good: var(--color-good);
+  --color-bg-warning: var(--color-warning);
+  --color-bg-note: var(--color-note);
 
-  --color-text: var(--color-gray-900);
-  --color-text-subtle: var(--color-gray-800);
-  --color-text-muted: var(--color-gray-500);
-  --color-text-primary: var(--color-primary-400);
-  --color-text-accent: var(--color-accent-400);
-  --color-text-inverse: var(--color-white);
-  --color-text-inverse-primary: var(--color-primary-50);
-  --color-text-inverse-accent: var(--color-accent-50);
-  --color-text-inverse-caution: var(--color-caution-50);
-  --color-text-inverse-good: var(--color-good-50);
-  --color-text-inverse-warning: var(--color-warning-50);
-  --color-text-inverse-note: var(--color-note-50);
-  --color-text-light: var(--color-white);
-  --color-text-light-primary: var(--color-primary-50);
-  --color-text-light-accent: var(--color-accent-50);
-  --color-text-light-caution: var(--color-caution-50);
-  --color-text-light-good: var(--color-good-50);
-  --color-text-light-warning: var(--color-warning-50);
-  --color-text-light-note: var(--color-note-50);
+  /* components */
+  --color-bg-field: var(--color-white);
+  --color-bg-field-muted: var(--color-white);
+  --color-bg-field-subtle: var(--color-white);
+  --color-bg-pressable: var(--color-white);
+  --color-bg-pressable-muted: var(--color-white);
+  --color-bg-pressable-subtle: var(--color-white);
+
+  /* -------------------------------------------------------------------------- */
+  /*                                 Foreground                                 */
+  /* -------------------------------------------------------------------------- */
+
+  /* gray palette */
+  --color-fg: var(--color-gray-950);
+  --color-fg-muted: var(--color-gray-500);
+  --color-fg-subtle: var(--color-gray-800);
+  --color-fg-inverse: var(--color-white);
+
+  /* themed */
+  --color-fg-primary: var(--color-primary-400);
+  --color-fg-accent: var(--color-accent-400);
+  --color-fg-caution: var(--color-caution-400);
+  --color-fg-good: var(--color-good-400);
+  --color-fg-warning: var(--color-warning-400);
+  --color-fg-note: var(--color-note-400);
+
+  /* fixed light */
+  --color-fg-light: var(--color-white);
+  --color-fg-light-primary: var(--color-primary-50);
+  --color-fg-light-accent: var(--color-accent-50);
+  --color-fg-light-caution: var(--color-caution-50);
+  --color-fg-light-good: var(--color-good-50);
+  --color-fg-light-warning: var(--color-warning-50);
+  --color-fg-light-note: var(--color-note-50);
+
+  /* -------------------------------------------------------------------------- */
+  /*                                   Others                                   */
+  /* -------------------------------------------------------------------------- */
 
   --color-border: var(--color-gray-100);
-  --color-border-strong: var(--color-gray-100);
-  --color-border-input: var(--color-gray-100);
+  --color-border-subtle: var(--color-gray-100);
+  --color-border-field: var(--color-gray-100);
+  --color-border-pressable: var(--color-gray-100);
+
   --color-ring: var(--color-primary);
 }
 
 @define-mixin tokens-dark {
-  --color-background: 0.16 var(--base-color-gray);
-  --color-background-muted: 0.24 var(--base-color-gray);
-  --color-background-subtle: 0.25 var(--base-color-gray);
-  --color-background-elevated-01: var(--color-gray-800);
-  --color-background-neutral: 0.18 var(--base-color-gray);
+  /* -------------------------------------------------------------------------- */
+  /*                                 Background                                 */
+  /* -------------------------------------------------------------------------- */
 
-  --color-background-inverse: var(--color-gray-50);
-  --color-background-inverse-primary: var(--color-primary-50);
-  --color-background-inverse-accent: var(--color-accent-50);
-  --color-background-inverse-caution: var(--color-caution-50);
-  --color-background-inverse-good: var(--color-good-50);
-  --color-background-inverse-warning: var(--color-warning-50);
-  --color-background-inverse-note: var(--color-note-50);
+  /* gray palette */
+  --color-bg: 0.16 var(--base-color-gray);
+  --color-bg-muted: 0.24 var(--base-color-gray);
+  --color-bg-subtle: 0.25 var(--base-color-gray);
+  --color-bg-elevated: var(--color-gray-800);
+  --color-bg-inverse: var(--color-gray-50);
 
-  --color-background-contrast: 0.45 var(--base-color-gray);
-  --color-background-contrast-primary: 0.45 var(--base-color-primary);
-  --color-background-contrast-accent: 0.45 var(--base-color-accent);
-  --color-background-contrast-caution: 0.45 var(--base-color-caution);
-  --color-background-contrast-good: 0.45 var(--base-color-good);
-  --color-background-contrast-warning: 0.45 var(--base-color-warning);
-  --color-background-contrast-note: 0.45 var(--base-color-note);
+  /* themed */
+  --color-bg-primary: 0.45 var(--base-color-primary);
+  --color-bg-accent: 0.45 var(--base-color-accent);
+  --color-bg-caution: 0.45 var(--base-color-caution);
+  --color-bg-good: 0.45 var(--base-color-good);
+  --color-bg-warning: 0.45 var(--base-color-warning);
+  --color-bg-note: 0.45 var(--base-color-note);
 
-  --color-text: var(--color-white);
-  --color-text-contrast: var(--color-white);
-  --color-text-subtle: var(--color-gray-400);
-  --color-text-muted: var(--color-gray-500);
-  --color-text-primary: var(--color-primary-300);
-  --color-text-accent: var(--color-accent-300);
-  --color-text-inverse: var(--color-gray-950);
-  --color-text-inverse-primary: var(--color-primary-950);
-  --color-text-inverse-accent: var(--color-accent-950);
-  --color-text-inverse-caution: var(--color-caution-950);
-  --color-text-inverse-good: var(--color-good-950);
-  --color-text-inverse-warning: var(--color-warning-950);
-  --color-text-inverse-note: var(--color-note-950);
-  --color-text-light: var(--color-white);
-  --color-text-light-primary: var(--color-primary-50);
-  --color-text-light-accent: var(--color-accent-50);
-  --color-text-light-caution: var(--color-caution-50);
-  --color-text-light-good: var(--color-good-50);
-  --color-text-light-warning: var(--color-warning-50);
-  --color-text-light-note: var(--color-note-50);
+  /* components */
+  --color-bg-field: 0.18 var(--base-color-gray);
+  --color-bg-field-muted: var(--color-bg-muted);
+  --color-bg-field-subtle: var(--color-bg-subtle);
+  --color-bg-pressable: 0.18 var(--base-color-gray);
+  --color-bg-pressable-muted: var(--color-bg-muted);
+  --color-bg-pressable-subtle: var(--color-bg-subtle);
 
-  --color-border: 0.2 var(--base-color-gray) / 0;
-  --color-border-strong: 0.3 var(--base-color-gray);
-  --color-border-input: 0.25 var(--base-color-gray);
+  /* -------------------------------------------------------------------------- */
+  /*                                 Foreground                                 */
+  /* -------------------------------------------------------------------------- */
+
+  /* gray palette */
+  --color-fg: var(--color-white);
+  --color-fg-muted: var(--color-gray-500);
+  --color-fg-subtle: var(--color-gray-400);
+  --color-fg-inverse: var(--color-gray-950);
+
+  /* themed */
+  --color-fg-primary: var(--color-primary-300);
+  --color-fg-accent: var(--color-accent-300);
+  --color-fg-caution: var(--color-caution-300);
+  --color-fg-good: var(--color-good-300);
+  --color-fg-warning: var(--color-warning-300);
+  --color-fg-note: var(--color-note-300);
+
+  /* fixed light */
+  /* --color-fg-light: var(--color-white);
+  --color-fg-light-primary: var(--color-primary-50);
+  --color-fg-light-accent: var(--color-accent-50);
+  --color-fg-light-caution: var(--color-caution-50);
+  --color-fg-light-good: var(--color-good-50);
+  --color-fg-light-warning: var(--color-warning-50);
+  --color-fg-light-note: var(--color-note-50); */
+
+  /* -------------------------------------------------------------------------- */
+  /*                                   Others                                   */
+  /* -------------------------------------------------------------------------- */
+
+  --color-border: 0.3 var(--base-color-gray);
+  --color-border-subtle: 0.2 var(--base-color-gray) / 0;
+  --color-border-field: 0.25 var(--base-color-gray);
+  --color-border-pressable: 0.25 var(--base-color-gray);
+
   --color-ring: var(--color-primary);
 }

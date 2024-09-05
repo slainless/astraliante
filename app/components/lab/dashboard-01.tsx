@@ -42,7 +42,7 @@ import {
 export function Dashboard01() {
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <header className="bg-background-elevated-01 sticky top-0 flex h-16 items-center gap-4 border-b px-4 md:px-6">
+      <header className="bg-bgc-elevated sticky top-0 flex h-16 items-center gap-4 border-b px-4 md:px-6">
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
           <a
             href="#"
@@ -51,30 +51,30 @@ export function Dashboard01() {
             <Package2 className="size-6" />
             <span className="sr-only">Acme Inc</span>
           </a>
-          <a href="#" className="text-text hover:text-text transition-colors">
+          <a href="#" className="text-fgc hover:text-fgc transition-colors">
             Dashboard
           </a>
           <a
             href="#"
-            className="text-text-muted hover:text-text transition-colors"
+            className="text-fgc-muted hover:text-fgc transition-colors"
           >
             Orders
           </a>
           <a
             href="#"
-            className="text-text-muted hover:text-text transition-colors"
+            className="text-fgc-muted hover:text-fgc transition-colors"
           >
             Products
           </a>
           <a
             href="#"
-            className="text-text-muted hover:text-text transition-colors"
+            className="text-fgc-muted hover:text-fgc transition-colors"
           >
             Customers
           </a>
           <a
             href="#"
-            className="text-text-muted hover:text-text transition-colors"
+            className="text-fgc-muted hover:text-fgc transition-colors"
           >
             Analytics
           </a>
@@ -99,19 +99,19 @@ export function Dashboard01() {
                 <Package2 className="size-6" />
                 <span className="sr-only">Acme Inc</span>
               </a>
-              <a href="#" className="hover:text-text">
+              <a href="#" className="hover:text-fgc">
                 Dashboard
               </a>
-              <a href="#" className="text-text-muted hover:text-text">
+              <a href="#" className="text-fgc-muted hover:text-fgc">
                 Orders
               </a>
-              <a href="#" className="text-text-muted hover:text-text">
+              <a href="#" className="text-fgc-muted hover:text-fgc">
                 Products
               </a>
-              <a href="#" className="text-text-muted hover:text-text">
+              <a href="#" className="text-fgc-muted hover:text-fgc">
                 Customers
               </a>
-              <a href="#" className="text-text-muted hover:text-text">
+              <a href="#" className="text-fgc-muted hover:text-fgc">
                 Analytics
               </a>
             </nav>
@@ -120,11 +120,11 @@ export function Dashboard01() {
         <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
           <form className="ml-auto flex-1 sm:flex-initial">
             <div className="relative">
-              <Search className="text-text-muted absolute left-2.5 top-2.5 size-4" />
+              <Search className="text-fgc-muted absolute left-2.5 top-2.5 size-4" />
               <Input
                 type="search"
                 placeholder="Search products..."
-                className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
+                className=" border-bdc-subtle pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
               />
             </div>
           </form>
@@ -153,11 +153,11 @@ export function Dashboard01() {
               <CardTitle className="text-sm font-medium">
                 Total Revenue
               </CardTitle>
-              <DollarSign className="text-text-muted size-4" />
+              <DollarSign className="text-fgc-muted size-4" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">$45,231.89</div>
-              <p className="text-text-muted text-xs">+20.1% from last month</p>
+              <p className="text-fgc-muted text-xs">+20.1% from last month</p>
             </CardContent>
           </Card>
           <Card x-chunk="dashboard-01-chunk-1">
@@ -165,31 +165,31 @@ export function Dashboard01() {
               <CardTitle className="text-sm font-medium">
                 Subscriptions
               </CardTitle>
-              <Users className="text-text-muted size-4" />
+              <Users className="text-fgc-muted size-4" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">+2350</div>
-              <p className="text-text-muted text-xs">+180.1% from last month</p>
+              <p className="text-fgc-muted text-xs">+180.1% from last month</p>
             </CardContent>
           </Card>
           <Card x-chunk="dashboard-01-chunk-2">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Sales</CardTitle>
-              <CreditCard className="text-text-muted size-4" />
+              <CreditCard className="text-fgc-muted size-4" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">+12,234</div>
-              <p className="text-text-muted text-xs">+19% from last month</p>
+              <p className="text-fgc-muted text-xs">+19% from last month</p>
             </CardContent>
           </Card>
           <Card x-chunk="dashboard-01-chunk-3">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Active Now</CardTitle>
-              <Activity className="text-text-muted size-4" />
+              <Activity className="text-fgc-muted size-4" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">+573</div>
-              <p className="text-text-muted text-xs">+201 since last hour</p>
+              <p className="text-fgc-muted text-xs">+201 since last hour</p>
             </CardContent>
           </Card>
         </div>
@@ -230,7 +230,7 @@ export function Dashboard01() {
                   <TableRow>
                     <TableCell>
                       <div className="font-medium">Liam Johnson</div>
-                      <div className="text-text-muted hidden text-sm md:inline">
+                      <div className="text-fgc-muted hidden text-sm md:inline">
                         liam@example.com
                       </div>
                     </TableCell>
@@ -250,7 +250,7 @@ export function Dashboard01() {
                   <TableRow>
                     <TableCell>
                       <div className="font-medium">Olivia Smith</div>
-                      <div className="text-text-muted hidden text-sm md:inline">
+                      <div className="text-fgc-muted hidden text-sm md:inline">
                         olivia@example.com
                       </div>
                     </TableCell>
@@ -270,7 +270,7 @@ export function Dashboard01() {
                   <TableRow>
                     <TableCell>
                       <div className="font-medium">Noah Williams</div>
-                      <div className="text-text-muted hidden text-sm md:inline">
+                      <div className="text-fgc-muted hidden text-sm md:inline">
                         noah@example.com
                       </div>
                     </TableCell>
@@ -290,7 +290,7 @@ export function Dashboard01() {
                   <TableRow>
                     <TableCell>
                       <div className="font-medium">Emma Brown</div>
-                      <div className="text-text-muted hidden text-sm md:inline">
+                      <div className="text-fgc-muted hidden text-sm md:inline">
                         emma@example.com
                       </div>
                     </TableCell>
@@ -310,7 +310,7 @@ export function Dashboard01() {
                   <TableRow>
                     <TableCell>
                       <div className="font-medium">Liam Johnson</div>
-                      <div className="text-text-muted hidden text-sm md:inline">
+                      <div className="text-fgc-muted hidden text-sm md:inline">
                         liam@example.com
                       </div>
                     </TableCell>
@@ -345,7 +345,7 @@ export function Dashboard01() {
                   <p className="text-sm font-medium leading-none">
                     Olivia Martin
                   </p>
-                  <p className="text-text-muted text-sm">
+                  <p className="text-fgc-muted text-sm">
                     olivia.martin~email.com
                   </p>
                 </div>
@@ -360,7 +360,7 @@ export function Dashboard01() {
                   <p className="text-sm font-medium leading-none">
                     Jackson Lee
                   </p>
-                  <p className="text-text-muted text-sm">
+                  <p className="text-fgc-muted text-sm">
                     jackson.lee~email.com
                   </p>
                 </div>
@@ -375,7 +375,7 @@ export function Dashboard01() {
                   <p className="text-sm font-medium leading-none">
                     Isabella Nguyen
                   </p>
-                  <p className="text-text-muted text-sm">
+                  <p className="text-fgc-muted text-sm">
                     isabella.nguyen~email.com
                   </p>
                 </div>
@@ -390,7 +390,7 @@ export function Dashboard01() {
                   <p className="text-sm font-medium leading-none">
                     William Kim
                   </p>
-                  <p className="text-text-muted text-sm">will~email.com</p>
+                  <p className="text-fgc-muted text-sm">will~email.com</p>
                 </div>
                 <div className="ml-auto font-medium">+$99.00</div>
               </div>
@@ -403,7 +403,7 @@ export function Dashboard01() {
                   <p className="text-sm font-medium leading-none">
                     Sofia Davis
                   </p>
-                  <p className="text-text-muted text-sm">
+                  <p className="text-fgc-muted text-sm">
                     sofia.davis~email.com
                   </p>
                 </div>

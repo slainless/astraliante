@@ -34,9 +34,9 @@ import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet"
 export function Dashboard02() {
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-      <div className="bg-background hidden border-r border-border-strong md:block">
-        <div className="flex h-full max-h-screen flex-col gap-2 bg-background-elevated-01">
-          <div className="flex h-14 border-border-strong items-center border-b px-4 lg:h-[60px] lg:px-6">
+      <div className="bg-bgc hidden border-r md:block">
+        <div className="flex h-full max-h-screen flex-col gap-2 bg-bgc-elevated">
+          <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <a href="/" className="flex items-center gap-2 font-semibold">
               <Package2 className="size-6" />
               <span className="">Acme Inc</span>
@@ -50,14 +50,14 @@ export function Dashboard02() {
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
               <a
                 href="#"
-                className="text-text hover:text-text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+                className="text-fgc hover:text-fgc-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 <Home className="size-4" />
                 Dashboard
               </a>
               <a
                 href="#"
-                className="text-text hover:text-text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+                className="text-fgc hover:text-fgc-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 <ShoppingCart className="size-4" />
                 Orders
@@ -67,21 +67,21 @@ export function Dashboard02() {
               </a>
               <a
                 href="#"
-                className="bg-background-muted text-text-primary hover:text-text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+                className="bg-bgc-muted text-fgc-primary hover:text-fgc-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 <Package className="size-4" />
                 Products{" "}
               </a>
               <a
                 href="#"
-                className="text-text hover:text-text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+                className="text-fgc hover:text-fgc-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 <Users className="size-4" />
                 Customers
               </a>
               <a
                 href="#"
-                className="text-text hover:text-text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+                className="text-fgc hover:text-fgc-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 <LineChart className="size-4" />
                 Analytics
@@ -110,7 +110,7 @@ export function Dashboard02() {
         </div>
       </div>
       <div className="flex flex-col">
-        <header className="bg-background-elevated-01 border-border-strong flex h-14 items-center gap-4 border-b px-4 lg:h-[60px] lg:px-6">
+        <header className="bg-bgc-elevated flex h-14 items-center gap-4 border-b px-4 lg:h-[60px] lg:px-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button
@@ -133,14 +133,14 @@ export function Dashboard02() {
                 </a>
                 <a
                   href="#"
-                  className="text-text hover:text-text mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
+                  className="text-fgc hover:text-fgc mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                 >
                   <Home className="size-5" />
                   Dashboard
                 </a>
                 <a
                   href="#"
-                  className="bg-background-muted text-text hover:text-text mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
+                  className="bg-bgc-muted text-fgc hover:text-fgc mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                 >
                   <ShoppingCart className="size-5" />
                   Orders
@@ -150,21 +150,21 @@ export function Dashboard02() {
                 </a>
                 <a
                   href="#"
-                  className="text-text hover:text-text mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
+                  className="text-fgc hover:text-fgc mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                 >
                   <Package className="size-5" />
                   Products
                 </a>
                 <a
                   href="#"
-                  className="text-text hover:text-text mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
+                  className="text-fgc hover:text-fgc mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                 >
                   <Users className="size-5" />
                   Customers
                 </a>
                 <a
                   href="#"
-                  className="text-text hover:text-text mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
+                  className="text-fgc hover:text-fgc mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                 >
                   <LineChart className="size-5" />
                   Analytics
@@ -191,11 +191,11 @@ export function Dashboard02() {
           <div className="w-full flex-1">
             <form>
               <div className="relative">
-                <Search className="text-text absolute left-2.5 top-2.5 size-4" />
+                <Search className="text-fgc absolute left-2.5 top-2.5 size-4" />
                 <Input
                   type="search"
                   placeholder="Search products..."
-                  className="bg-background w-full appearance-none pl-8 shadow-none md:w-2/3 lg:w-1/3"
+                  className="border-bdc-subtle w-full appearance-none pl-8 shadow-none md:w-2/3 lg:w-1/3"
                 />
               </div>
             </form>
@@ -222,14 +222,14 @@ export function Dashboard02() {
             <h1 className="text-lg font-semibold md:text-2xl">Inventory</h1>
           </div>
           <div
-            className="flex flex-1 items-center justify-center rounded-lg border border-dashed border-border-strong shadow-sm"
+            className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm"
             x-chunk="dashboard-02-chunk-1"
           >
             <div className="flex flex-col items-center gap-1 text-center">
               <h3 className="text-2xl font-bold tracking-tight">
                 You have no products
               </h3>
-              <p className="text-text text-sm">
+              <p className="text-fgc text-sm">
                 You can start selling as soon as you add a product.
               </p>
               <Button className="mt-4">Add Product</Button>

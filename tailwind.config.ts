@@ -41,73 +41,85 @@ export default {
       ...createColors("warning"),
       ...createColors("caution"),
 
-      background: {
-        DEFAULT: `oklch(var(--color-background) / <alpha-value>)`,
-        muted: `oklch(var(--color-background-muted) / <alpha-value>)`,
-        subtle: `oklch(var(--color-background-subtle) / <alpha-value>)`,
-        elevated: {
-          "01": `oklch(var(--color-background-elevated-01) / <alpha-value>)`,
-        },
-        neutral: `oklch(var(--color-background-neutral) / <alpha-value>)`,
+      bgc: {
+        /* -------------------------------------------------------------------------- */
+        /*                                 Background                                 */
+        /* -------------------------------------------------------------------------- */
 
-        inverse: {
-          DEFAULT: `oklch(var(--color-background-inverse) / <alpha-value>)`,
-          primary: `oklch(var(--color-background-inverse-primary) / <alpha-value>)`,
-          accent: `oklch(var(--color-background-inverse-accent) / <alpha-value>)`,
-          gray: `oklch(var(--color-background-inverse-gray) / <alpha-value>)`,
-          caution: `oklch(var(--color-background-inverse-caution) / <alpha-value>)`,
-          good: `oklch(var(--color-background-inverse-good) / <alpha-value>)`,
-          warning: `oklch(var(--color-background-inverse-warning) / <alpha-value>)`,
-          note: `oklch(var(--color-background-inverse-note) / <alpha-value>)`,
-        },
+        // gray palette
+        DEFAULT: `oklch(var(--color-bg) / <alpha-value>)`,
+        muted: `oklch(var(--color-bg-muted) / <alpha-value>)`,
+        subtle: `oklch(var(--color-bg-subtle) / <alpha-value>)`,
+        elevated: `oklch(var(--color-bg-elevated) / <alpha-value>)`,
+        inverse: `oklch(var(--color-bg-inverse) / <alpha-value>)`,
 
-        contrast: {
-          DEFAULT: `oklch(var(--color-background-contrast) / <alpha-value>)`,
-          primary: `oklch(var(--color-background-contrast-primary) / <alpha-value>)`,
-          accent: `oklch(var(--color-background-contrast-accent) / <alpha-value>)`,
-          caution: `oklch(var(--color-background-contrast-caution) / <alpha-value>)`,
-          good: `oklch(var(--color-background-contrast-good) / <alpha-value>)`,
-          warning: `oklch(var(--color-background-contrast-warning) / <alpha-value>)`,
-          note: `oklch(var(--color-background-contrast-note) / <alpha-value>)`,
+        // themed
+        primary: `oklch(var(--color-bg-primary) / <alpha-value>)`,
+        accent: `oklch(var(--color-bg-accent) / <alpha-value>)`,
+        gray: `oklch(var(--color-bg-gray) / <alpha-value>)`,
+        caution: `oklch(var(--color-bg-caution) / <alpha-value>)`,
+        good: `oklch(var(--color-bg-good) / <alpha-value>)`,
+        warning: `oklch(var(--color-bg-warning) / <alpha-value>)`,
+        note: `oklch(var(--color-bg-note) / <alpha-value>)`,
+
+        // components
+        field: {
+          DEFAULT: `oklch(var(--color-bg-field) / <alpha-value>)`,
+          muted: `oklch(var(--color-bg-field-muted) / <alpha-value>)`,
+          subtle: `oklch(var(--color-bg-field-subtle) / <alpha-value>)`,
+        },
+        pressable: {
+          DEFAULT: `oklch(var(--color-bg-pressable) / <alpha-value>)`,
+          muted: `oklch(var(--color-bg-pressable-muted) / <alpha-value>)`,
+          subtle: `oklch(var(--color-bg-pressable-subtle) / <alpha-value>)`,
         },
       },
 
-      text: {
-        DEFAULT: `oklch(var(--color-text) / <alpha-value>)`,
-        subtle: `oklch(var(--color-text-subtle) / <alpha-value>)`,
-        muted: `oklch(var(--color-text-muted) / <alpha-value>)`,
-        primary: `oklch(var(--color-text-primary) / <alpha-value>)`,
-        accent: `oklch(var(--color-text-accent) / <alpha-value>)`,
+      fgc: {
+        /* -------------------------------------------------------------------------- */
+        /*                                 Foreground                                 */
+        /* -------------------------------------------------------------------------- */
 
-        inverse: {
-          DEFAULT: `oklch(var(--color-text-inverse) / <alpha-value>)`,
-          primary: `oklch(var(--color-text-inverse-primary) / <alpha-value>)`,
-          accent: `oklch(var(--color-text-inverse-accent) / <alpha-value>)`,
-          gray: `oklch(var(--color-text-inverse-gray) / <alpha-value>)`,
-          caution: `oklch(var(--color-text-inverse-caution) / <alpha-value>)`,
-          good: `oklch(var(--color-text-inverse-good) / <alpha-value>)`,
-          warning: `oklch(var(--color-text-inverse-warning) / <alpha-value>)`,
-          note: `oklch(var(--color-text-inverse-note) / <alpha-value>)`,
-        },
+        // gray palette
+        DEFAULT: `oklch(var(--color-fg) / <alpha-value>)`,
+        muted: `oklch(var(--color-fg-muted) / <alpha-value>)`,
+        subtle: `oklch(var(--color-fg-subtle) / <alpha-value>)`,
+        inverse: `oklch(var(--color-fg-inverse) / <alpha-value>)`,
 
+        // themed
+        primary: `oklch(var(--color-fg-primary) / <alpha-value>)`,
+        accent: `oklch(var(--color-fg-accent) / <alpha-value>)`,
+        caution: `oklch(var(--color-fg-caution) / <alpha-value>)`,
+        good: `oklch(var(--color-fg-good) / <alpha-value>)`,
+        warning: `oklch(var(--color-fg-warning) / <alpha-value>)`,
+        note: `oklch(var(--color-fg-note) / <alpha-value>)`,
+
+        // fixed light
         light: {
-          DEFAULT: `oklch(var(--color-text-light) / <alpha-value>)`,
-          primary: `oklch(var(--color-text-light-primary) / <alpha-value>)`,
-          accent: `oklch(var(--color-text-light-accent) / <alpha-value>)`,
-          gray: `oklch(var(--color-text-light-gray) / <alpha-value>)`,
-          caution: `oklch(var(--color-text-light-caution) / <alpha-value>)`,
-          good: `oklch(var(--color-text-light-good) / <alpha-value>)`,
-          warning: `oklch(var(--color-text-light-warning) / <alpha-value>)`,
-          note: `oklch(var(--color-text-light-note) / <alpha-value>)`,
+          DEFAULT: `oklch(var(--color-fg-light) / <alpha-value>)`,
+          primary: `oklch(var(--color-fg-light-primary) / <alpha-value>)`,
+          accent: `oklch(var(--color-fg-light-accent) / <alpha-value>)`,
+          caution: `oklch(var(--color-fg-light-caution) / <alpha-value>)`,
+          good: `oklch(var(--color-fg-light-good) / <alpha-value>)`,
+          warning: `oklch(var(--color-fg-light-warning) / <alpha-value>)`,
+          note: `oklch(var(--color-fg-light-note) / <alpha-value>)`,
         },
       },
 
-      border: {
+      /* -------------------------------------------------------------------------- */
+      /*                                   Others                                   */
+      /* -------------------------------------------------------------------------- */
+
+      bdc: {
         DEFAULT: `oklch(var(--color-border))`,
-        strong: `oklch(var(--color-border-strong))`,
-        input: `oklch(var(--color-border-input))`,
+        subtle: `oklch(var(--color-border-subtle))`,
+        field: `oklch(var(--color-border-field))`,
+        pressable: `oklch(var(--color-border-pressable))`,
       },
-      ring: `oklch(var(--color-ring))`,
+
+      etc: {
+        ring: `oklch(var(--color-ring))`,
+      },
 
       white: "white",
       black: "black",

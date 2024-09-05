@@ -71,12 +71,12 @@ import {
 
 export function Dashboard05() {
   return (
-    <div className="bg-background flex min-h-screen w-full flex-col">
-      <aside className="bg-background-elevated-01 fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r sm:flex">
+    <div className="bg-bgc flex min-h-screen w-full flex-col">
+      <aside className="bg-bgc-elevated fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r sm:flex">
         <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
           <a
             href="#"
-            className="bg-background-contrast-primary text-text-light group flex size-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:size-8 md:text-base"
+            className="bg-bgc-primary text-fgc-light group flex size-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:size-8 md:text-base"
           >
             <Package2 className="size-4 transition-all group-hover:scale-110" />
             <span className="sr-only">Acme Inc</span>
@@ -85,7 +85,7 @@ export function Dashboard05() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="text-text-muted hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="text-fgc-muted hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <Home className="size-5" />
                 <span className="sr-only">Dashboard</span>
@@ -97,7 +97,7 @@ export function Dashboard05() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="bg-background-subtle text-text hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="bg-bgc-subtle text-fgc hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <ShoppingCart className="size-5" />
                 <span className="sr-only">Orders</span>
@@ -109,7 +109,7 @@ export function Dashboard05() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="text-text-muted hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="text-fgc-muted hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <Package className="size-5" />
                 <span className="sr-only">Products</span>
@@ -121,7 +121,7 @@ export function Dashboard05() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="text-text-muted hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="text-fgc-muted hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <Users2 className="size-5" />
                 <span className="sr-only">Customers</span>
@@ -133,7 +133,7 @@ export function Dashboard05() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="text-text-muted hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="text-fgc-muted hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <LineChart className="size-5" />
                 <span className="sr-only">Analytics</span>
@@ -147,7 +147,7 @@ export function Dashboard05() {
             <TooltipTrigger asChild>
               <a
                 href="#"
-                className="text-text-muted hover:text-text flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
+                className="text-fgc-muted hover:text-fgc flex size-9 items-center justify-center rounded-lg transition-colors md:size-8"
               >
                 <Settings className="size-5" />
                 <span className="sr-only">Settings</span>
@@ -158,7 +158,7 @@ export function Dashboard05() {
         </nav>
       </aside>
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
-        <header className="bg-background-neutral sticky top-0 z-30 flex h-14 items-center gap-4 border-b px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+        <header className="bg-bgc-neutral sticky top-0 z-30 flex h-14 items-center gap-4 border-b px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">
@@ -170,42 +170,39 @@ export function Dashboard05() {
               <nav className="grid gap-6 text-lg font-medium">
                 <a
                   href="#"
-                  className="bg-background-primary group flex size-10 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:text-base"
+                  className="bg-bgc-primary group flex size-10 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:text-base"
                 >
                   <Package2 className="size-5 transition-all group-hover:scale-110" />
                   <span className="sr-only">Acme Inc</span>
                 </a>
                 <a
                   href="#"
-                  className="text-text-muted hover:text-text flex items-center gap-4 px-2.5"
+                  className="text-fgc-muted hover:text-fgc flex items-center gap-4 px-2.5"
                 >
                   <Home className="size-5" />
                   Dashboard
                 </a>
-                <a
-                  href="#"
-                  className="text-text flex items-center gap-4 px-2.5"
-                >
+                <a href="#" className="text-fgc flex items-center gap-4 px-2.5">
                   <ShoppingCart className="size-5" />
                   Orders
                 </a>
                 <a
                   href="#"
-                  className="text-text-muted hover:text-text flex items-center gap-4 px-2.5"
+                  className="text-fgc-muted hover:text-fgc flex items-center gap-4 px-2.5"
                 >
                   <Package className="size-5" />
                   Products
                 </a>
                 <a
                   href="#"
-                  className="text-text-muted hover:text-text flex items-center gap-4 px-2.5"
+                  className="text-fgc-muted hover:text-fgc flex items-center gap-4 px-2.5"
                 >
                   <Users2 className="size-5" />
                   Customers
                 </a>
                 <a
                   href="#"
-                  className="text-text-muted hover:text-text flex items-center gap-4 px-2.5"
+                  className="text-fgc-muted hover:text-fgc flex items-center gap-4 px-2.5"
                 >
                   <LineChart className="size-5" />
                   Settings
@@ -233,11 +230,11 @@ export function Dashboard05() {
             </BreadcrumbList>
           </Breadcrumb>
           <div className="relative ml-auto flex-1 md:grow-0">
-            <Search className="text-text-muted absolute left-2.5 top-2.5 size-4" />
+            <Search className="text-fgc-muted absolute left-2.5 top-2.5 size-4" />
             <Input
               type="search"
               placeholder="Search..."
-              className="bg-background-neutral w-full rounded-lg pl-8 md:w-[200px] lg:w-[336px]"
+              className="w-full rounded-lg pl-8 md:w-[200px] lg:w-[336px]"
             />
           </div>
           <DropdownMenu>
@@ -287,7 +284,7 @@ export function Dashboard05() {
                   <CardTitle className="text-4xl">$1,329</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-text-muted text-xs">
+                  <div className="text-fgc-muted text-xs">
                     +25% from last week
                   </div>
                 </CardContent>
@@ -301,7 +298,7 @@ export function Dashboard05() {
                   <CardTitle className="text-4xl">$5,329</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-text-muted text-xs">
+                  <div className="text-fgc-muted text-xs">
                     +10% from last month
                   </div>
                 </CardContent>
@@ -379,10 +376,10 @@ export function Dashboard05() {
                         </TableRow>
                       </TableHeader>
                       <TableBody>
-                        <TableRow className="bg-background-accent">
+                        <TableRow className="bg-bgc-subtle">
                           <TableCell>
                             <div className="font-medium">Liam Johnson</div>
-                            <div className="text-text-muted hidden text-sm md:inline">
+                            <div className="text-fgc-muted hidden text-sm md:inline">
                               liam@example.com
                             </div>
                           </TableCell>
@@ -402,7 +399,7 @@ export function Dashboard05() {
                         <TableRow>
                           <TableCell>
                             <div className="font-medium">Olivia Smith</div>
-                            <div className="text-text-muted hidden text-sm md:inline">
+                            <div className="text-fgc-muted hidden text-sm md:inline">
                               olivia@example.com
                             </div>
                           </TableCell>
@@ -422,7 +419,7 @@ export function Dashboard05() {
                         <TableRow>
                           <TableCell>
                             <div className="font-medium">Noah Williams</div>
-                            <div className="text-text-muted hidden text-sm md:inline">
+                            <div className="text-fgc-muted hidden text-sm md:inline">
                               noah@example.com
                             </div>
                           </TableCell>
@@ -442,7 +439,7 @@ export function Dashboard05() {
                         <TableRow>
                           <TableCell>
                             <div className="font-medium">Emma Brown</div>
-                            <div className="text-text-muted hidden text-sm md:inline">
+                            <div className="text-fgc-muted hidden text-sm md:inline">
                               emma@example.com
                             </div>
                           </TableCell>
@@ -462,7 +459,7 @@ export function Dashboard05() {
                         <TableRow>
                           <TableCell>
                             <div className="font-medium">Liam Johnson</div>
-                            <div className="text-text-muted hidden text-sm md:inline">
+                            <div className="text-fgc-muted hidden text-sm md:inline">
                               liam@example.com
                             </div>
                           </TableCell>
@@ -482,7 +479,7 @@ export function Dashboard05() {
                         <TableRow>
                           <TableCell>
                             <div className="font-medium">Liam Johnson</div>
-                            <div className="text-text-muted hidden text-sm md:inline">
+                            <div className="text-fgc-muted hidden text-sm md:inline">
                               liam@example.com
                             </div>
                           </TableCell>
@@ -502,7 +499,7 @@ export function Dashboard05() {
                         <TableRow>
                           <TableCell>
                             <div className="font-medium">Olivia Smith</div>
-                            <div className="text-text-muted hidden text-sm md:inline">
+                            <div className="text-fgc-muted hidden text-sm md:inline">
                               olivia@example.com
                             </div>
                           </TableCell>
@@ -522,7 +519,7 @@ export function Dashboard05() {
                         <TableRow>
                           <TableCell>
                             <div className="font-medium">Emma Brown</div>
-                            <div className="text-text-muted hidden text-sm md:inline">
+                            <div className="text-fgc-muted hidden text-sm md:inline">
                               emma@example.com
                             </div>
                           </TableCell>
@@ -548,7 +545,7 @@ export function Dashboard05() {
           </div>
           <div>
             <Card className="overflow-hidden" x-chunk="dashboard-05-chunk-4">
-              <CardHeader className="bg-background-muted/50 flex flex-row items-start">
+              <CardHeader className="bg-bgc-muted/50 flex flex-row items-start">
                 <div className="grid gap-0.5">
                   <CardTitle className="group flex items-center gap-2 text-lg">
                     Order Oe31b70H
@@ -591,13 +588,13 @@ export function Dashboard05() {
                   <div className="font-semibold">Order Details</div>
                   <ul className="grid gap-3">
                     <li className="flex items-center justify-between">
-                      <span className="text-text-muted">
+                      <span className="text-fgc-muted">
                         Glimmer Lamps x <span>2</span>
                       </span>
                       <span>$250.00</span>
                     </li>
                     <li className="flex items-center justify-between">
-                      <span className="text-text-muted">
+                      <span className="text-fgc-muted">
                         Aqua Filters x <span>1</span>
                       </span>
                       <span>$49.00</span>
@@ -606,19 +603,19 @@ export function Dashboard05() {
                   <Separator className="my-2" />
                   <ul className="grid gap-3">
                     <li className="flex items-center justify-between">
-                      <span className="text-text-muted">Subtotal</span>
+                      <span className="text-fgc-muted">Subtotal</span>
                       <span>$299.00</span>
                     </li>
                     <li className="flex items-center justify-between">
-                      <span className="text-text-muted">Shipping</span>
+                      <span className="text-fgc-muted">Shipping</span>
                       <span>$5.00</span>
                     </li>
                     <li className="flex items-center justify-between">
-                      <span className="text-text-muted">Tax</span>
+                      <span className="text-fgc-muted">Tax</span>
                       <span>$25.00</span>
                     </li>
                     <li className="flex items-center justify-between font-semibold">
-                      <span className="text-text-muted">Total</span>
+                      <span className="text-fgc-muted">Total</span>
                       <span>$329.00</span>
                     </li>
                   </ul>
@@ -627,7 +624,7 @@ export function Dashboard05() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="grid gap-3">
                     <div className="font-semibold">Shipping Information</div>
-                    <address className="text-text-muted grid gap-0.5 not-italic">
+                    <address className="text-fgc-muted grid gap-0.5 not-italic">
                       <span>Liam Johnson</span>
                       <span>1234 Main St.</span>
                       <span>Anytown, CA 12345</span>
@@ -635,7 +632,7 @@ export function Dashboard05() {
                   </div>
                   <div className="grid auto-rows-max gap-3">
                     <div className="font-semibold">Billing Information</div>
-                    <div className="text-text-muted">
+                    <div className="text-fgc-muted">
                       Same as shipping address
                     </div>
                   </div>
@@ -645,17 +642,17 @@ export function Dashboard05() {
                   <div className="font-semibold">Customer Information</div>
                   <dl className="grid gap-3">
                     <div className="flex items-center justify-between">
-                      <dt className="text-text-muted">Customer</dt>
+                      <dt className="text-fgc-muted">Customer</dt>
                       <dd>Liam Johnson</dd>
                     </div>
                     <div className="flex items-center justify-between">
-                      <dt className="text-text-muted">Email</dt>
+                      <dt className="text-fgc-muted">Email</dt>
                       <dd>
                         <a href="mailto:">liam~acme.com</a>
                       </dd>
                     </div>
                     <div className="flex items-center justify-between">
-                      <dt className="text-text-muted">Phone</dt>
+                      <dt className="text-fgc-muted">Phone</dt>
                       <dd>
                         <a href="tel:">+1 234 567 890</a>
                       </dd>
@@ -667,7 +664,7 @@ export function Dashboard05() {
                   <div className="font-semibold">Payment Information</div>
                   <dl className="grid gap-3">
                     <div className="flex items-center justify-between">
-                      <dt className="text-text-muted flex items-center gap-1">
+                      <dt className="text-fgc-muted flex items-center gap-1">
                         <CreditCard className="size-4" />
                         Visa
                       </dt>
@@ -676,8 +673,8 @@ export function Dashboard05() {
                   </dl>
                 </div>
               </CardContent>
-              <CardFooter className="bg-background-muted/50 flex flex-row items-center border-t px-6 py-3">
-                <div className="text-text-muted text-xs">
+              <CardFooter className="bg-bgc-muted/50 flex flex-row items-center border-t px-6 py-3">
+                <div className="text-fgc-muted text-xs">
                   Updated <time dateTime="2023-11-23">November 23, 2023</time>
                 </div>
                 <Pagination className="ml-auto mr-0 w-auto">

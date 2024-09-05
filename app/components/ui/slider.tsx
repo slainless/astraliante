@@ -103,13 +103,13 @@ const Slider = React.forwardRef<
       >
         <SliderPrimitive.Track
           className={ny(
-            "bg-background-contrast-primary-subtle/20 relative grow overflow-hidden rounded-full",
+            "bg-bgc-primary-subtle/20 relative grow overflow-hidden rounded-full",
             orientation === "horizontal" ? "h-1.5 w-full" : "h-full w-1.5"
           )}
         >
           <SliderPrimitive.Range
             className={ny(
-              "bg-background-contrast-primary-subtle absolute",
+              "bg-bgc-primary-subtle absolute",
               orientation === "horizontal" ? "h-full" : "w-full"
             )}
           />
@@ -128,7 +128,7 @@ const Slider = React.forwardRef<
                       "w-0.5 h-2": orientation !== "vertical",
                       "w-2 h-0.5": orientation === "vertical",
                     },
-                    "bg-background-muted-foreground absolute",
+                    "bg-bgc-muted-foreground absolute",
                     {
                       "left-1":
                         orientation === "vertical" && showSteps === "half",
@@ -155,7 +155,7 @@ const Slider = React.forwardRef<
           <SliderPrimitive.Thumb
             key={index}
             className={ny(
-              "border-primary-subtle/50 bg-background-elevated-01 focus-visible:ring-ring block size-4 rounded-full border shadow transition-colors focus-visible:outline-none focus-visible:ring-1"
+              "border-primary-subtle/50 bg-bgc-elevated focus-visible:ring-ring block size-4 rounded-full border shadow transition-colors focus-visible:outline-none focus-visible:ring-1"
             )}
           >
             {hoveredThumbIndex && formatLabel && (
@@ -171,7 +171,7 @@ const Slider = React.forwardRef<
                   },
                   { "right-8 -translate-y-1/4": formatLabelSide === "left" },
                   { "left-8 -translate-y-1/4": formatLabelSide === "right" },
-                  "bg-background-elevated-01 text-popover-foreground absolute z-30 w-max items-center justify-items-center rounded-md border px-2 py-1 text-center shadow-sm"
+                  "bg-bgc-elevated text-fgc absolute z-30 w-max items-center justify-items-center rounded-md border px-2 py-1 text-center shadow-sm"
                 )}
               >
                 {formatLabel(numberStep)}
