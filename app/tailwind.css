@@ -1,133 +1,5 @@
-@define-mixin lchgen $name, $chroma, $hue {
-  --base-color-$(name): $chroma $hue;
-  --color-$(name): 0.378 var(--base-color-$(name));
-  --color-$(name)-50: 0.95 var(--base-color-$(name));
-  --color-$(name)-100: 0.9 var(--base-color-$(name));
-  --color-$(name)-200: 0.8 var(--base-color-$(name));
-  --color-$(name)-300: 0.7 var(--base-color-$(name));
-  --color-$(name)-400: 0.6 var(--base-color-$(name));
-  --color-$(name)-500: 0.5 var(--base-color-$(name));
-  --color-$(name)-600: 0.4 var(--base-color-$(name));
-  --color-$(name)-700: 0.3 var(--base-color-$(name));
-  --color-$(name)-800: 0.2 var(--base-color-$(name));
-  --color-$(name)-900: 0.1 var(--base-color-$(name));
-  --color-$(name)-950: 0.05 var(--base-color-$(name));
-}
-
-@define-mixin aliasgen $alias, $from {
-  --base-color-$(alias): var(--base-color-$(from));
-  --color-$(alias): var(--color-$(from));
-  --color-$(alias)-50: var(--color-$(from)-50);
-  --color-$(alias)-100: var(--color-$(from)-100);
-  --color-$(alias)-200: var(--color-$(from)-200);
-  --color-$(alias)-300: var(--color-$(from)-300);
-  --color-$(alias)-400: var(--color-$(from)-400);
-  --color-$(alias)-500: var(--color-$(from)-500);
-  --color-$(alias)-600: var(--color-$(from)-600);
-  --color-$(alias)-700: var(--color-$(from)-700);
-  --color-$(alias)-800: var(--color-$(from)-800);
-  --color-$(alias)-900: var(--color-$(from)-900);
-  --color-$(alias)-950: var(--color-$(from)-950);
-}
-
-@define-mixin light-variables {
-  --color-background: var(--color-white);
-  --color-background-muted: 0.96 var(--base-color-gray);
-  --color-background-subtle: 0.95 var(--base-color-gray);
-  --color-background-elevated-01: var(--color-white);
-  --color-background-neutral: var(--color-white);
-
-  --color-background-inverse: var(--color-gray-900);
-  --color-background-inverse-primary: var(--color-primary-900);
-  --color-background-inverse-accent: var(--color-accent-900);
-  --color-background-inverse-caution: var(--color-caution-900);
-  --color-background-inverse-good: var(--color-good-900);
-  --color-background-inverse-warning: var(--color-warning-900);
-  --color-background-inverse-note: var(--color-note-900);
-
-  --color-background-contrast: var(--color-gray);
-  --color-background-contrast-primary: var(--color-primary);
-  --color-background-contrast-accent: var(--color-accent);
-  --color-background-contrast-caution: var(--color-caution);
-  --color-background-contrast-good: var(--color-good);
-  --color-background-contrast-warning: var(--color-warning);
-  --color-background-contrast-note: var(--color-note);
-
-  --color-text: var(--color-gray-900);
-  --color-text-subtle: var(--color-gray-800);
-  --color-text-muted: var(--color-gray-500);
-  --color-text-primary: var(--color-primary-400);
-  --color-text-accent: var(--color-accent-400);
-  --color-text-inverse: var(--color-white);
-  --color-text-inverse-primary: var(--color-primary-50);
-  --color-text-inverse-accent: var(--color-accent-50);
-  --color-text-inverse-caution: var(--color-caution-50);
-  --color-text-inverse-good: var(--color-good-50);
-  --color-text-inverse-warning: var(--color-warning-50);
-  --color-text-inverse-note: var(--color-note-50);
-  --color-text-light: var(--color-white);
-  --color-text-light-primary: var(--color-primary-50);
-  --color-text-light-accent: var(--color-accent-50);
-  --color-text-light-caution: var(--color-caution-50);
-  --color-text-light-good: var(--color-good-50);
-  --color-text-light-warning: var(--color-warning-50);
-  --color-text-light-note: var(--color-note-50);
-
-  --color-border: var(--color-gray-100);
-  --color-border-strong: var(--color-gray-100);
-  --color-border-input: var(--color-gray-100);
-  --color-ring: var(--color-primary);
-}
-
-@define-mixin dark-variables {
-  --color-background: 0.16 var(--base-color-gray);
-  --color-background-muted: 0.24 var(--base-color-gray);
-  --color-background-subtle: 0.25 var(--base-color-gray);
-  --color-background-elevated-01: var(--color-gray-800);
-  --color-background-neutral: 0.18 var(--base-color-gray);
-
-  --color-background-inverse: var(--color-gray-50);
-  --color-background-inverse-primary: var(--color-primary-50);
-  --color-background-inverse-accent: var(--color-accent-50);
-  --color-background-inverse-caution: var(--color-caution-50);
-  --color-background-inverse-good: var(--color-good-50);
-  --color-background-inverse-warning: var(--color-warning-50);
-  --color-background-inverse-note: var(--color-note-50);
-
-  --color-background-contrast: 0.45 var(--base-color-gray);
-  --color-background-contrast-primary: 0.45 var(--base-color-primary);
-  --color-background-contrast-accent: 0.45 var(--base-color-accent);
-  --color-background-contrast-caution: 0.45 var(--base-color-caution);
-  --color-background-contrast-good: 0.45 var(--base-color-good);
-  --color-background-contrast-warning: 0.45 var(--base-color-warning);
-  --color-background-contrast-note: 0.45 var(--base-color-note);
-
-  --color-text: var(--color-white);
-  --color-text-contrast: var(--color-white);
-  --color-text-subtle: var(--color-gray-400);
-  --color-text-muted: var(--color-gray-500);
-  --color-text-primary: var(--color-primary-300);
-  --color-text-accent: var(--color-accent-300);
-  --color-text-inverse: var(--color-gray-950);
-  --color-text-inverse-primary: var(--color-primary-950);
-  --color-text-inverse-accent: var(--color-accent-950);
-  --color-text-inverse-caution: var(--color-caution-950);
-  --color-text-inverse-good: var(--color-good-950);
-  --color-text-inverse-warning: var(--color-warning-950);
-  --color-text-inverse-note: var(--color-note-950);
-  --color-text-light: var(--color-white);
-  --color-text-light-primary: var(--color-primary-50);
-  --color-text-light-accent: var(--color-accent-50);
-  --color-text-light-caution: var(--color-caution-50);
-  --color-text-light-good: var(--color-good-50);
-  --color-text-light-warning: var(--color-warning-50);
-  --color-text-light-note: var(--color-note-50);
-
-  --color-border: 0.2 var(--base-color-gray) / 0;
-  --color-border-strong: 0.3 var(--base-color-gray);
-  --color-border-input: 0.25 var(--base-color-gray);
-  --color-ring: var(--color-primary);
-}
+@import "./utils.css";
+@import "./token.css";
 
 @tailwind base;
 @tailwind components;
@@ -135,46 +7,44 @@
 
 @layer base {
   :root {
+    @mixin palette indigo, 0.191, 267.01;
+    @mixin palette slate, 0.007, 248.07;
+    @mixin palette jade, 0.115, 170.73;
+    @mixin palette ruby, 0.195, 13.15;
+    @mixin palette green, 0.133, 157.68;
+    @mixin palette amber, 0.157, 84.13;
+    @mixin palette cyan, 0.1216861438783739, 221.7438047249627;
+
+    @mixin alias primary, indigo;
+    @mixin alias gray, slate;
+    @mixin alias accent, jade;
+    @mixin alias note, ruby;
+    @mixin alias good, green;
+    @mixin alias warning, amber;
+    @mixin alias caution, cyan;
+  }
+
+  :root {
     --radius: 0.5rem;
 
-    --color-white: 1 0 104;
+    --color-white: 1 0 0;
 
-    @mixin lchgen indigo, 0.191, 267.01;
-    @mixin lchgen slate, 0.007, 248.07;
-    @mixin lchgen jade, 0.115, 170.73;
-    @mixin lchgen ruby, 0.195, 13.15;
-    @mixin lchgen green, 0.133, 157.68;
-    @mixin lchgen amber, 0.157, 84.13;
-    @mixin lchgen cyan, 0.1216861438783739, 221.7438047249627;
-
-    @mixin aliasgen primary, indigo;
-    @mixin aliasgen gray, slate;
-    @mixin aliasgen accent, jade;
-    @mixin aliasgen note, ruby;
-    @mixin aliasgen good, green;
-    @mixin aliasgen warning, amber;
-    @mixin aliasgen caution, cyan;
-
-    @mixin light-variables;
+    @mixin tokens-light;
   }
-
   .light {
-    @mixin light-variables;
+    @mixin tokens-light;
   }
-
   .dark {
-    @mixin dark-variables;
+    @mixin tokens-dark;
   }
-
   @media (prefers-color-scheme: light) {
     .system {
-      @mixin light-variables;
+      @mixin tokens-light;
     }
   }
-
   @media (prefers-color-scheme: dark) {
     .system {
-      @mixin dark-variables;
+      @mixin tokens-dark;
     }
   }
 }

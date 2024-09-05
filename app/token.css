@@ -1,0 +1,98 @@
+@define-mixin tokens-light {
+  --color-background: var(--color-white);
+  --color-background-muted: 0.96 var(--base-color-gray);
+  --color-background-subtle: 0.95 var(--base-color-gray);
+  --color-background-elevated-01: var(--color-white);
+  --color-background-neutral: var(--color-white);
+
+  --color-background-inverse: var(--color-gray-900);
+  --color-background-inverse-primary: var(--color-primary-900);
+  --color-background-inverse-accent: var(--color-accent-900);
+  --color-background-inverse-caution: var(--color-caution-900);
+  --color-background-inverse-good: var(--color-good-900);
+  --color-background-inverse-warning: var(--color-warning-900);
+  --color-background-inverse-note: var(--color-note-900);
+
+  --color-background-contrast: var(--color-gray);
+  --color-background-contrast-primary: var(--color-primary);
+  --color-background-contrast-accent: var(--color-accent);
+  --color-background-contrast-caution: var(--color-caution);
+  --color-background-contrast-good: var(--color-good);
+  --color-background-contrast-warning: var(--color-warning);
+  --color-background-contrast-note: var(--color-note);
+
+  --color-text: var(--color-gray-900);
+  --color-text-subtle: var(--color-gray-800);
+  --color-text-muted: var(--color-gray-500);
+  --color-text-primary: var(--color-primary-400);
+  --color-text-accent: var(--color-accent-400);
+  --color-text-inverse: var(--color-white);
+  --color-text-inverse-primary: var(--color-primary-50);
+  --color-text-inverse-accent: var(--color-accent-50);
+  --color-text-inverse-caution: var(--color-caution-50);
+  --color-text-inverse-good: var(--color-good-50);
+  --color-text-inverse-warning: var(--color-warning-50);
+  --color-text-inverse-note: var(--color-note-50);
+  --color-text-light: var(--color-white);
+  --color-text-light-primary: var(--color-primary-50);
+  --color-text-light-accent: var(--color-accent-50);
+  --color-text-light-caution: var(--color-caution-50);
+  --color-text-light-good: var(--color-good-50);
+  --color-text-light-warning: var(--color-warning-50);
+  --color-text-light-note: var(--color-note-50);
+
+  --color-border: var(--color-gray-100);
+  --color-border-strong: var(--color-gray-100);
+  --color-border-input: var(--color-gray-100);
+  --color-ring: var(--color-primary);
+}
+
+@define-mixin tokens-dark {
+  --color-background: 0.16 var(--base-color-gray);
+  --color-background-muted: 0.24 var(--base-color-gray);
+  --color-background-subtle: 0.25 var(--base-color-gray);
+  --color-background-elevated-01: var(--color-gray-800);
+  --color-background-neutral: 0.18 var(--base-color-gray);
+
+  --color-background-inverse: var(--color-gray-50);
+  --color-background-inverse-primary: var(--color-primary-50);
+  --color-background-inverse-accent: var(--color-accent-50);
+  --color-background-inverse-caution: var(--color-caution-50);
+  --color-background-inverse-good: var(--color-good-50);
+  --color-background-inverse-warning: var(--color-warning-50);
+  --color-background-inverse-note: var(--color-note-50);
+
+  --color-background-contrast: 0.45 var(--base-color-gray);
+  --color-background-contrast-primary: 0.45 var(--base-color-primary);
+  --color-background-contrast-accent: 0.45 var(--base-color-accent);
+  --color-background-contrast-caution: 0.45 var(--base-color-caution);
+  --color-background-contrast-good: 0.45 var(--base-color-good);
+  --color-background-contrast-warning: 0.45 var(--base-color-warning);
+  --color-background-contrast-note: 0.45 var(--base-color-note);
+
+  --color-text: var(--color-white);
+  --color-text-contrast: var(--color-white);
+  --color-text-subtle: var(--color-gray-400);
+  --color-text-muted: var(--color-gray-500);
+  --color-text-primary: var(--color-primary-300);
+  --color-text-accent: var(--color-accent-300);
+  --color-text-inverse: var(--color-gray-950);
+  --color-text-inverse-primary: var(--color-primary-950);
+  --color-text-inverse-accent: var(--color-accent-950);
+  --color-text-inverse-caution: var(--color-caution-950);
+  --color-text-inverse-good: var(--color-good-950);
+  --color-text-inverse-warning: var(--color-warning-950);
+  --color-text-inverse-note: var(--color-note-950);
+  --color-text-light: var(--color-white);
+  --color-text-light-primary: var(--color-primary-50);
+  --color-text-light-accent: var(--color-accent-50);
+  --color-text-light-caution: var(--color-caution-50);
+  --color-text-light-good: var(--color-good-50);
+  --color-text-light-warning: var(--color-warning-50);
+  --color-text-light-note: var(--color-note-50);
+
+  --color-border: 0.2 var(--base-color-gray) / 0;
+  --color-border-strong: 0.3 var(--base-color-gray);
+  --color-border-input: 0.25 var(--base-color-gray);
+  --color-ring: var(--color-primary);
+}
