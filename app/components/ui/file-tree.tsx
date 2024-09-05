@@ -191,7 +191,7 @@ const TreeIndicator = forwardRef<
       dir={direction}
       ref={ref}
       className={ny(
-        "bg-muted absolute left-1.5 h-full w-px rounded-md py-3 duration-300 ease-in-out hover:bg-slate-300 rtl:right-1.5",
+        "bg-background-muted absolute left-1.5 h-full w-px rounded-md py-3 duration-300 ease-in-out hover:bg-slate-300 rtl:right-1.5",
         className
       )}
       {...props}
@@ -248,7 +248,7 @@ const Folder = forwardRef<
             `flex items-center gap-1 rounded-md text-sm`,
             className,
             {
-              "bg-muted rounded-md": isSelect && isSelectable,
+              "bg-background-muted rounded-md": isSelect && isSelectable,
               "cursor-pointer": isSelectable,
               "cursor-not-allowed opacity-50": !isSelectable,
             }
@@ -319,7 +319,7 @@ const File = forwardRef<
           className={ny(
             "flex cursor-pointer items-center gap-1 rounded-md pr-1 text-sm duration-200 ease-in-out  rtl:pl-1 rtl:pr-0",
             {
-              "bg-muted": isSelected && isSelectable,
+              "bg-background-muted": isSelected && isSelectable,
             },
             isSelectable ? "cursor-pointer" : "cursor-not-allowed opacity-50",
             className

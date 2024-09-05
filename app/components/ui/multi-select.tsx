@@ -204,7 +204,7 @@ const MultiSelectTrigger = React.forwardRef<
         data-disabled={disabled}
         {...props}
         className={ny(
-          "border-input ring-offset-background focus:ring-ring flex size-full min-h-10 items-center justify-between whitespace-nowrap rounded-md border bg-transparent px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 [&>span]:line-clamp-1",
+          "border-border-input ring-offset-background focus:ring-ring flex size-full min-h-10 items-center justify-between whitespace-nowrap rounded-md border bg-transparent px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 [&>span]:line-clamp-1",
           disabled ? "cursor-not-allowed opacity-50" : "cursor-text",
           className
         )}
@@ -248,7 +248,7 @@ const MultiSelectValue = React.forwardRef<
 
     if (!value.length || !firstRendered) {
       return (
-        <span className="text-muted-foreground pointer-events-none">
+        <span className="text-text-muted pointer-events-none">
           {placeholder}
         </span>
       )
@@ -288,7 +288,7 @@ const MultiSelectValue = React.forwardRef<
                 }}
               >
                 <span>{child}</span>
-                <X className="text-muted-foreground group-hover/multi-select-badge:text-foreground ml-1 size-3" />
+                <X className="text-text-muted group-hover/multi-select-badge:text-text ml-1 size-3" />
               </Badge>
             )
 
@@ -310,7 +310,7 @@ const MultiSelectValue = React.forwardRef<
             return el
           })}
           {renderRemain ? (
-            <span className="text-muted-foreground py-.5 text-xs leading-4">
+            <span className="text-text-muted py-.5 text-xs leading-4">
               +{renderRemain}
             </span>
           ) : null}
@@ -374,7 +374,7 @@ const MultiSelectContent = React.forwardRef<
         sideOffset={4}
         collisionPadding={10}
         className={ny(
-          "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-full rounded-md border p-0 shadow-md outline-none"
+          "bg-background-neutral text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-full rounded-md border p-0 shadow-md outline-none"
         )}
         style={
           {
@@ -472,7 +472,7 @@ const MultiSelectItem = React.forwardRef<
         {...props}
         value={value}
         className={ny(
-          disabled && "text-muted-foreground cursor-not-allowed",
+          disabled && "text-text-muted cursor-not-allowed",
           className
         )}
         disabled={disabled}

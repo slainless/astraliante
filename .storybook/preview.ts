@@ -1,5 +1,7 @@
 import type { Preview } from "@storybook/react"
+import { TooltipProvider } from "@radix-ui/react-tooltip"
 import "~/tailwind.css"
+import { createElement } from "react"
 
 const preview: Preview = {
   parameters: {
@@ -13,7 +15,7 @@ const preview: Preview = {
       stylePreview: true,
     },
   },
-  decorators: [],
+  decorators: [(Story) => createElement(TooltipProvider, null, [Story()])],
 }
 
 export default preview

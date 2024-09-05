@@ -373,7 +373,9 @@ const CarouselDots = React.forwardRef<HTMLDivElement, CarouselDotsProps>(
             onClick={() => scrollTo(index)}
             className={ny(
               dotsVariants({ size }),
-              currentIndex === index ? "bg-card-foreground" : "bg-muted"
+              currentIndex === index
+                ? "bg-card-foreground"
+                : "bg-background-muted"
             )}
           />
         ))}

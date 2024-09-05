@@ -1,36 +1,24 @@
 import type { Config } from "tailwindcss"
 import animate from "tailwindcss-animate"
-import * as radixColors from "@radix-ui/colors"
-import { createPlugin } from "windy-radix-palette"
 
-type BaseColor = Exclude<
-  keyof typeof radixColors,
-  | `${string}Dark`
-  | `${string}DarkA`
-  | `${string}A`
-  | `${string}P3`
-  | `${string}P3A`
->
-const grabColors = <T extends BaseColor>(color: T) =>
-  ({
-    [`${color}`]: radixColors[`${color}P3`],
-    [`${color}A`]: radixColors[`${color}P3A`],
-    [`${color}Dark`]: radixColors[`${color}DarkP3`],
-    [`${color}DarkA`]: radixColors[`${color}DarkP3A`],
-  } as const)
+const createColors = <T extends string>(color: T) => {
+  const colors = {
+    DEFAULT: `oklch(var(--color-${color}))`,
+    50: `oklch(var(--color-${color}-50))`,
+    100: `oklch(var(--color-${color}-100))`,
+    200: `oklch(var(--color-${color}-200))`,
+    300: `oklch(var(--color-${color}-300))`,
+    400: `oklch(var(--color-${color}-400))`,
+    500: `oklch(var(--color-${color}-500))`,
+    600: `oklch(var(--color-${color}-600))`,
+    700: `oklch(var(--color-${color}-700))`,
+    800: `oklch(var(--color-${color}-800))`,
+    900: `oklch(var(--color-${color}-900))`,
+    950: `oklch(var(--color-${color}-950))`,
+  } as const
 
-const colors = createPlugin({
-  colors: {
-    ...grabColors("indigo"), // primary
-    ...grabColors("slate"), // gray
-    ...grabColors("jade"), // secondary
-
-    ...grabColors("ruby"), // danger
-    ...grabColors("green"), // success
-    ...grabColors("amber"), // warning
-    ...grabColors("cyan"), // info
-  },
-})
+  return { [color]: colors } as { [Key in T]: typeof colors }
+}
 
 export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
@@ -44,73 +32,88 @@ export default {
         "2xl": "1400px",
       },
     },
-    extend: {
-      colors: {
-        border: colors.alias({
-          name: "border",
-          value: "slate.6",
-        }),
-        input: colors.alias({ name: "input", value: "slate.6" }),
-        ring: colors.alias({ name: "ring", value: "slate.5" }),
-        background: colors.alias({
-          name: "background",
-          light: "white",
-          dark: "slate.1",
-        }),
-        foreground: colors.alias({ name: "foreground", value: "slate.12" }),
-        primary: {
-          ...(colors.alias("indigo") as Record<string, string>),
-          subtle: colors.alias({ name: "primary-subtle", value: "indigo.3" }),
-          foreground: colors.alias({
-            name: "primary-foreground",
-            value: "indigo.12",
-          }),
+    colors: {
+      ...createColors("primary"),
+      ...createColors("gray"),
+      ...createColors("accent"),
+      ...createColors("note"),
+      ...createColors("good"),
+      ...createColors("warning"),
+      ...createColors("caution"),
+
+      background: {
+        DEFAULT: `oklch(var(--color-background) / <alpha-value>)`,
+        muted: `oklch(var(--color-background-muted) / <alpha-value>)`,
+        subtle: `oklch(var(--color-background-subtle) / <alpha-value>)`,
+        elevated: {
+          "01": `oklch(var(--color-background-elevated-01) / <alpha-value>)`,
         },
-        gray: colors.alias("slate"),
-        secondary: {
-          subtle: colors.alias({ name: "secondary-subtle", value: "slate.3" }),
-          foreground: colors.alias({
-            name: "secondary-foreground",
-            value: "slate.12",
-          }),
+        neutral: `oklch(var(--color-background-neutral) / <alpha-value>)`,
+
+        inverse: {
+          DEFAULT: `oklch(var(--color-background-inverse) / <alpha-value>)`,
+          primary: `oklch(var(--color-background-inverse-primary) / <alpha-value>)`,
+          accent: `oklch(var(--color-background-inverse-accent) / <alpha-value>)`,
+          gray: `oklch(var(--color-background-inverse-gray) / <alpha-value>)`,
+          caution: `oklch(var(--color-background-inverse-caution) / <alpha-value>)`,
+          good: `oklch(var(--color-background-inverse-good) / <alpha-value>)`,
+          warning: `oklch(var(--color-background-inverse-warning) / <alpha-value>)`,
+          note: `oklch(var(--color-background-inverse-note) / <alpha-value>)`,
         },
-        destructive: {
-          DEFAULT: colors.alias({ name: "destructive", value: "ruby.3" }),
-          foreground: colors.alias({
-            name: "destructive-foreground",
-            value: "ruby.12",
-          }),
-        },
-        muted: {
-          DEFAULT: colors.alias({ name: "muted", value: "slate.3" }),
-          foreground: colors.alias({
-            name: "muted-foreground",
-            value: "slate.12",
-          }),
-        },
-        accent: {
-          ...(colors.alias("jade") as Record<string, string>),
-          subtle: colors.alias({ name: "accent-subtle", value: "jade.3" }),
-          foreground: colors.alias({
-            name: "accent-foreground",
-            value: "jade.12",
-          }),
-        },
-        popover: {
-          DEFAULT: colors.alias({ name: "card", value: "slate.3" }),
-          foreground: colors.alias({
-            name: "card-foreground",
-            value: "slate.12",
-          }),
-        },
-        card: {
-          DEFAULT: colors.alias({ name: "card", value: "slate.3" }),
-          foreground: colors.alias({
-            name: "card-foreground",
-            value: "slate.12",
-          }),
+
+        contrast: {
+          DEFAULT: `oklch(var(--color-background-contrast) / <alpha-value>)`,
+          primary: `oklch(var(--color-background-contrast-primary) / <alpha-value>)`,
+          accent: `oklch(var(--color-background-contrast-accent) / <alpha-value>)`,
+          caution: `oklch(var(--color-background-contrast-caution) / <alpha-value>)`,
+          good: `oklch(var(--color-background-contrast-good) / <alpha-value>)`,
+          warning: `oklch(var(--color-background-contrast-warning) / <alpha-value>)`,
+          note: `oklch(var(--color-background-contrast-note) / <alpha-value>)`,
         },
       },
+
+      text: {
+        DEFAULT: `oklch(var(--color-text) / <alpha-value>)`,
+        subtle: `oklch(var(--color-text-subtle) / <alpha-value>)`,
+        muted: `oklch(var(--color-text-muted) / <alpha-value>)`,
+        primary: `oklch(var(--color-text-primary) / <alpha-value>)`,
+        accent: `oklch(var(--color-text-accent) / <alpha-value>)`,
+
+        inverse: {
+          DEFAULT: `oklch(var(--color-text-inverse) / <alpha-value>)`,
+          primary: `oklch(var(--color-text-inverse-primary) / <alpha-value>)`,
+          accent: `oklch(var(--color-text-inverse-accent) / <alpha-value>)`,
+          gray: `oklch(var(--color-text-inverse-gray) / <alpha-value>)`,
+          caution: `oklch(var(--color-text-inverse-caution) / <alpha-value>)`,
+          good: `oklch(var(--color-text-inverse-good) / <alpha-value>)`,
+          warning: `oklch(var(--color-text-inverse-warning) / <alpha-value>)`,
+          note: `oklch(var(--color-text-inverse-note) / <alpha-value>)`,
+        },
+
+        light: {
+          DEFAULT: `oklch(var(--color-text-light) / <alpha-value>)`,
+          primary: `oklch(var(--color-text-light-primary) / <alpha-value>)`,
+          accent: `oklch(var(--color-text-light-accent) / <alpha-value>)`,
+          gray: `oklch(var(--color-text-light-gray) / <alpha-value>)`,
+          caution: `oklch(var(--color-text-light-caution) / <alpha-value>)`,
+          good: `oklch(var(--color-text-light-good) / <alpha-value>)`,
+          warning: `oklch(var(--color-text-light-warning) / <alpha-value>)`,
+          note: `oklch(var(--color-text-light-note) / <alpha-value>)`,
+        },
+      },
+
+      border: {
+        DEFAULT: `oklch(var(--color-border))`,
+        strong: `oklch(var(--color-border-strong))`,
+        input: `oklch(var(--color-border-input))`,
+      },
+      ring: `oklch(var(--color-ring))`,
+
+      white: "white",
+      black: "black",
+      transparent: "transparent",
+    },
+    extend: {
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -132,5 +135,5 @@ export default {
       },
     },
   },
-  plugins: [animate, colors.plugin],
+  plugins: [animate],
 } satisfies Config
