@@ -9,21 +9,18 @@ import {
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node"
 
 import styles from "./tailwind.css?url"
-import Body from "./components/body"
+import { Body } from "./components/body"
 import { parse } from "cookie"
 import { GlobalStore } from "#lib/jotai"
-import { SystemThemeSupport, getSSRPreferredTheme, themeAtom } from "#lib/theme"
+import { SystemThemeSupport, themeAtom } from "#lib/theme"
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }]
 
 export function loader({ request }: LoaderFunctionArgs) {
-  const cookies = parse(request.headers.get("Cookie") ?? "")
-
-  return { theme: getSSRPreferredTheme(cookies) }
+  return
 }
 
 export default function App() {
-  const { theme } = useLoaderData<typeof loader>()
   return (
     <html lang="en">
       <head>
@@ -34,7 +31,7 @@ export default function App() {
         <SystemThemeSupport />
       </head>
       <GlobalStore>
-        <Body ssrTheme={theme} themeAtom={themeAtom}>
+        <Body themeAtom={themeAtom}>
           <Outlet />
           <ScrollRestoration />
           <Scripts />

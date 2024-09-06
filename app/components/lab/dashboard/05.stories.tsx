@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { Dashboard06 } from "./dashboard-06"
+import { Dashboard05 } from "./05"
 
 const meta: Meta = {
-  title: "Components Lab/Dashboard 06",
-  component: Dashboard06,
+  component: Dashboard05,
   parameters: {
     layout: {
       fullscreen: true,
