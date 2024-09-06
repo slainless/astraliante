@@ -12,19 +12,19 @@ export function Header(props: HeaderProps) {
   return (
     <div
       className={ny(
-        "w-full h-16 border-b flex items-center px-6 bg-bgc-elevated",
+        "w-full h-16 border-b flex items-center px-6 sticky top-0 bg-bgc-elevated/80 backdrop-blur-md",
         props.className
       )}
     >
-      <div className="w-64 relative flex items-center">
-        <Search className="size-4 absolute ms-3 text-gray-12" />
-        <Input
-          type="search"
-          placeholder="Search file..."
-          className="border-bdc-subtle ps-10 placeholder:text-gray-11"
-        />
-      </div>
-      <div className="ml-auto">
+      <div className="ml-auto flex gap-3">
+        <div className="w-64 relative flex items-center">
+          <Search className="size-4 absolute ms-3 text-gray-12" />
+          <Input
+            type="search"
+            placeholder="Search file..."
+            className="border-bdc-subtle bg-bgc ps-10 placeholder:text-gray-11"
+          />
+        </div>
         <ToggleGroup
           type="single"
           variant="outline"
