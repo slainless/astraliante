@@ -155,7 +155,7 @@ const Slider = React.forwardRef<
           <SliderPrimitive.Thumb
             key={index}
             className={ny(
-              "border-primary-subtle/50 bg-bgc-elevated focus-visible:ring-ring block size-4 rounded-full border shadow transition-colors focus-visible:outline-none focus-visible:ring-1"
+              "border-primary-subtle/50 bg-bgc-elevated focus-visible:ring-etc-ring block size-4 rounded-full border shadow transition-colors focus-visible:outline-none focus-visible:ring-1"
             )}
           >
             {hoveredThumbIndex && formatLabel && (

@@ -413,7 +413,7 @@ export function Dashboard03() {
             </Badge>
             <div className="flex-1" />
             <form
-              className="bg-bgc focus-within:ring-ring relative overflow-hidden rounded-lg border focus-within:ring-1"
+              className="bg-bgc focus-within:ring-etc-ring relative overflow-hidden rounded-lg border focus-within:ring-1"
               x-chunk="dashboard-03-chunk-1"
             >
               <Label htmlFor="message" className="sr-only">
