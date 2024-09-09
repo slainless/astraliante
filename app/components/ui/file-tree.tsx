@@ -19,13 +19,7 @@ import {
 import { ny } from "~/lib/utils"
 import { Button } from "~/components/ui/button"
 import { ScrollArea } from "~/components/ui/scroll-area"
-
-interface TreeViewElement {
-  id: string
-  name: string
-  isSelectable?: boolean
-  children?: TreeViewElement[]
-}
+import type { TreeViewElement } from "#lib/file-tree"
 
 interface TreeContextProps {
   selectedId: string | undefined
