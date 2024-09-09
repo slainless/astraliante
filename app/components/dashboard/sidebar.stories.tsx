@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { FolderListSidebar, Sidebar } from "./sidebar"
 import { TreeViewElement } from "#lib/file-tree"
+import { faker } from "@faker-js/faker"
 
 const meta: Meta<typeof Sidebar> = {
   component: Sidebar,
@@ -24,32 +25,27 @@ export const WithList: Story = {
   },
 }
 
+const exampleList = Array(200)
+  .fill("")
+  .map((_) => faker.system.directoryPath())
 export const WithFileList = {
   render: () => (
     <FolderListSidebar
-      initialSelectedId="/src/components/header"
-      initialExpandedItems={[
-        ...TreeViewElement.deepExpand("/etc/bin"),
-        ...TreeViewElement.deepExpand("/mnt/C/projects"),
-        ...TreeViewElement.deepExpand(
-          "/mnt/C/Users/slainless/AppData/Android/Sdk/build-tools/34.0.0/lib/etc/Android"
-        ),
-      ]}
+      initialSelectedId={exampleList[faker.number.int(exampleList.length - 1)]}
+      initialExpandedItems={Array.from(
+        new Set(
+          Array(200)
+            .fill(0)
+            .map((_) =>
+              TreeViewElement.deepExpand(
+                exampleList[faker.number.int(exampleList.length - 1)]
+              )
+            )
+            .flat()
+        )
+      )}
     >
-      {TreeViewElement.from([
-        "/src/app/layout",
-        "/src/app/page",
-        "/src/components/header",
-        "/src/components/footer",
-        "/src/lib",
-        "/src/types",
-        "/etc/bin/bash",
-        "/var/lib",
-        "/mnt/C/projects/slainless",
-        "/var/www/slainless.io/assets/img",
-        "/mnt/C/Program Files/Google Chrome",
-        "/mnt/C/Users/slainless/AppData/Android/Sdk/build-tools/34.0.0/lib/etc/Android/X",
-      ])}
+      {TreeViewElement.from(exampleList)}
     </FolderListSidebar>
   ),
 }
