@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { FolderListSidebar, Sidebar } from "./sidebar"
-import type { TreeViewElement } from "#components/ui/file-tree"
+import { TreeViewElement } from "#lib/file-tree"
 
 const meta: Meta<typeof Sidebar> = {
   component: Sidebar,
@@ -26,26 +26,30 @@ export const WithList: Story = {
 
 export const WithFileList = {
   render: () => (
-    <FolderListSidebar>
-      {Array(10).fill(
-        folder("1", "src", [
-          folder("2", "app", [folder("3", "layout"), folder("4", "page")]),
-          folder("5", "components", [
-            folder("6", "header"),
-            folder("7", "footer"),
-          ]),
-          folder("8", "lib"),
-          folder("9", "types"),
-        ])
-      )}
+    <FolderListSidebar
+      initialSelectedId="/src/components/header"
+      initialExpandedItems={[
+        ...TreeViewElement.deepExpand("/etc/bin"),
+        ...TreeViewElement.deepExpand("/mnt/C/projects"),
+        ...TreeViewElement.deepExpand(
+          "/mnt/C/Users/slainless/AppData/Android/Sdk/build-tools/34.0.0/lib/etc/Android"
+        ),
+      ]}
+    >
+      {TreeViewElement.from([
+        "/src/app/layout",
+        "/src/app/page",
+        "/src/components/header",
+        "/src/components/footer",
+        "/src/lib",
+        "/src/types",
+        "/etc/bin/bash",
+        "/var/lib",
+        "/mnt/C/projects/slainless",
+        "/var/www/slainless.io/assets/img",
+        "/mnt/C/Program Files/Google Chrome",
+        "/mnt/C/Users/slainless/AppData/Android/Sdk/build-tools/34.0.0/lib/etc/Android/X",
+      ])}
     </FolderListSidebar>
   ),
 }
-
-const folder = (id: string, name: string, children?: TreeViewElement[]) =>
-  ({
-    id,
-    name,
-    children,
-    isSelectable: true,
-  } satisfies TreeViewElement)

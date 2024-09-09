@@ -47,4 +47,15 @@ export namespace TreeViewElement {
 
     return tree
   }
+
+  export function deepExpand(path: Path): string[] {
+    const expansion = [] as string[]
+    let current = ""
+    for (const [index, part] of path.split("/").entries()) {
+      if (index === 0 && part == "") continue
+      current += "/" + part
+      expansion.push(current)
+    }
+    return expansion
+  }
 }
