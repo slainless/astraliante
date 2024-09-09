@@ -26,6 +26,7 @@
     "paths": {
       "#components/*": ["./app/components/*"],
       "#lib/*": ["./app/lib/*"],
+      "#core/*": ["./app/core/*"],
       "~/*": ["./app/*"]
     },
     // Vite takes care of building everything, not tsc.
