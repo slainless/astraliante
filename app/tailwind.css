@@ -13,18 +13,22 @@
   }
   .light {
     @mixin tokens-light;
+    color-scheme: light;
   }
   .dark {
     @mixin tokens-dark;
+    color-scheme: dark;
   }
   @media (prefers-color-scheme: light) {
     .system {
       @mixin tokens-light;
+      color-scheme: light;
     }
   }
   @media (prefers-color-scheme: dark) {
     .system {
       @mixin tokens-dark;
+      color-scheme: dark;
     }
   }
 }
