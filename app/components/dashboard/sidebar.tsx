@@ -27,12 +27,12 @@ export function Sidebar(props: SidebarProps) {
   )
 }
 
-export interface FileListSidebarProps
+export interface FolderListSidebarProps
   extends Omit<ComponentProps<typeof Tree>, "children"> {
   elements?: TreeViewElement[]
   children?: TreeViewElement[]
 }
-export function FolderListSidebar(props: FileListSidebarProps) {
+export function FolderListSidebar(props: FolderListSidebarProps) {
   const els = props.elements ?? props.children
   return (
     <Sidebar>
