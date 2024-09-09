@@ -7,13 +7,18 @@ import {
 import type { ComponentProps, PropsWithChildren } from "react"
 import { FolderTreeRenderer } from "./folder-tree"
 import { FolderClosedIcon } from "lucide-react"
+import { Object, ny } from "#lib/utils"
 
-export interface SidebarProps extends PropsWithChildren {}
-export function Sidebar(props: SidebarProps) {
+export interface SidebarProps extends ComponentProps<"div"> {}
+export function Sidebar({ className, ...props }: SidebarProps) {
   return (
     <div
       id="sidebar"
-      className="w-72 bg-bgc-elevated sticky top-0 left-0 h-[100vh] block border-e overflow-auto"
+      className={ny(
+        "w-72 bg-bgc-elevated sticky top-0 left-0 h-[100vh] block border-e overflow-auto",
+        className
+      )}
+      {...props}
     >
       <div
         id="header"
@@ -28,19 +33,30 @@ export function Sidebar(props: SidebarProps) {
 }
 
 export interface FolderListSidebarProps
-  extends Omit<ComponentProps<typeof Tree>, "children"> {
+  extends Omit<ComponentProps<typeof Tree>, "children" | "className">,
+    Omit<SidebarProps, "children"> {
   elements?: TreeViewElement[]
   children?: TreeViewElement[]
 }
 export function FolderListSidebar(props: FolderListSidebarProps) {
-  const els = props.elements ?? props.children
+  const [_tree, sidebar] = Object.partition(props, [
+    "elements",
+    "children",
+    "closeIcon",
+    "openIcon",
+    "indicator",
+    "initialExpandedItems",
+    "dir",
+  ])
+  const { elements, children, ...tree } = _tree
+  const els = elements ?? children
   return (
-    <Sidebar>
+    <Sidebar {...sidebar}>
       <Tree
         className="bg-background rounded-md"
-        initialSelectedId="7"
         elements={els}
         closeIcon={<FolderClosedIcon className="size-4" />}
+        {...tree}
       >
         <FolderTreeRenderer elements={els} />
       </Tree>

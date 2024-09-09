@@ -10,8 +10,8 @@ export interface LayoutProps extends PropsWithChildren {
 export function Layout(props: LayoutProps) {
   const folders = useAtomValue(foldersAtom)
   return (
-    <div className="grid min-h-screen w-full grid-cols-[max-content_auto]">
-      <FolderListSidebar elements={folders} />
+    <div className="grid min-h-screen w-full grid-cols-[var(--sidebar-width,_theme(spacing.72))_auto]">
+      <FolderListSidebar elements={folders} className="w-full" />
       <div>
         <Header />
         <div>{props.children}</div>
