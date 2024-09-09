@@ -12,7 +12,7 @@ export function Header(props: HeaderProps) {
   return (
     <div
       className={ny(
-        "w-full h-16 border-b flex items-center px-6 sticky top-0 bg-bgc-elevated/80 backdrop-blur-md",
+        "w-full h-[var(--header-height,_theme(spacing.16))] border-b dark:border-b-0 dark:shadow-md flex items-center px-6 sticky top-0 bg-bgc-elevated/60 dark:bg-bgc-elevated/80 backdrop-blur-md",
         props.className
       )}
     >
