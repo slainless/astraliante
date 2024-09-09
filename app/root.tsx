@@ -10,14 +10,13 @@ import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node"
 
 import styles from "./tailwind.css?url"
 import { Body } from "./components/body"
-import { parse } from "cookie"
 import { GlobalStore } from "#lib/jotai"
 import { SystemThemeSupport, themeAtom } from "#lib/theme"
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }]
 
 export function loader({ request }: LoaderFunctionArgs) {
-  return
+  return null
 }
 
 export default function App() {
