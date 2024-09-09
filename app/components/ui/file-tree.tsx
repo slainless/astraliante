@@ -9,7 +9,12 @@ import React, {
   useState,
 } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { FileIcon, FolderIcon, FolderOpenIcon } from "lucide-react"
+import {
+  FileIcon,
+  FolderClosedIcon,
+  FolderIcon,
+  FolderOpenIcon,
+} from "lucide-react"
 
 import { ny } from "~/lib/utils"
 import { Button } from "~/components/ui/button"
@@ -36,7 +41,7 @@ interface TreeContextProps {
 
 const TreeContext = createContext<TreeContextProps | null>(null)
 
-function useTree() {
+export function useTree() {
   const context = useContext(TreeContext)
   if (!context) {
     throw new Error("useTree must be used within a TreeProvider")
@@ -257,8 +262,8 @@ const Folder = forwardRef<
           onClick={() => handleExpand(value)}
         >
           {expandedItems?.includes(value)
-            ? openIcon ?? <FolderOpenIcon className="size-4" />
-            : closeIcon ?? <FolderIcon className="size-4" />}
+            ? openIcon ?? <DefaultOpenIcon className="size-4" />
+            : closeIcon ?? <DefaultCloseIcon className="size-4" />}
           <span>{element}</span>
         </AccordionPrimitive.Trigger>
         <AccordionPrimitive.Content className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down relative h-full overflow-hidden text-sm">
@@ -389,4 +394,6 @@ const CollapseButton = forwardRef<
 
 CollapseButton.displayName = "CollapseButton"
 
+export const DefaultOpenIcon = FolderOpenIcon
+export const DefaultCloseIcon = FolderIcon
 export { CollapseButton, File, Folder, Tree, type TreeViewElement }
